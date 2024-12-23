@@ -69769,6 +69769,16 @@
       }
     },
     {
+      "Id": "0991a7b2-8dd1-4cf8-ae9d-69867245dfb9",
+      "EntityType": "Entity",
+      "Name": "フロー終了",
+      "MetamodelId": "c29f8781-16a2-4a8b-8efc-ffb0ff2882af",
+      "Metamodel": "フロー終了",
+      "Fields": {
+        "Name": "フロー終了"
+      }
+    },
+    {
       "Id": "09af16c8-f538-4df7-8658-60823deb5189",
       "EntityType": "Entity",
       "Name": "ステップ",
@@ -70040,6 +70050,16 @@
       "Metamodel": "条件",
       "Fields": {
         "Name": "AWVは起動していない"
+      }
+    },
+    {
+      "Id": "372a08c7-76f4-4177-bbeb-5b01ad528c86",
+      "EntityType": "Entity",
+      "Name": "フロー終了",
+      "MetamodelId": "c29f8781-16a2-4a8b-8efc-ffb0ff2882af",
+      "Metamodel": "フロー終了",
+      "Fields": {
+        "Name": "フロー終了"
       }
     },
     {
@@ -71245,6 +71265,15 @@
       "IsDerivation": true
     },
     {
+      "Id": "0cec7afd-8a08-47b2-9aac-65bf71a6b74f",
+      "RelationType": "Ref",
+      "MetamodelId": "742f1da8-2079-4a90-809c-e3ef2eb599ba",
+      "Metamodel": "フロー",
+      "SourceId": "d8f5b573-365d-4c41-aad3-8eb9eee70eb9",
+      "TargetId": "372a08c7-76f4-4177-bbeb-5b01ad528c86",
+      "TargetIndex": -1
+    },
+    {
       "Id": "0de28d2b-89fe-4679-9e48-494d1f93e650",
       "RelationType": "Ref",
       "MetamodelId": "2db02f06-6b12-44f9-9f78-6e01d83f70c6",
@@ -71791,6 +71820,16 @@
       "SourceId": "f7f9c4b5-bd66-4c7c-9a72-9135f96073d0",
       "TargetId": "d8f5b573-365d-4c41-aad3-8eb9eee70eb9",
       "SourceIndex": 1,
+      "TargetIndex": -1
+    },
+    {
+      "Id": "5f3bae24-c2ed-4d3c-8072-7f470cf62422",
+      "RelationType": "Embed",
+      "MetamodelId": "cd4fe24a-522a-4b48-a1a7-78d2dbf75c9c",
+      "Metamodel": "コントロールの所有",
+      "SourceId": "53f40f14-37cb-420c-b349-6588ffa573be",
+      "TargetId": "372a08c7-76f4-4177-bbeb-5b01ad528c86",
+      "SourceIndex": 7,
       "TargetIndex": -1
     },
     {
@@ -72493,6 +72532,15 @@
       "TargetIndex": -1
     },
     {
+      "Id": "b552049f-8487-49dc-a21e-371ff17cec4d",
+      "RelationType": "Ref",
+      "MetamodelId": "742f1da8-2079-4a90-809c-e3ef2eb599ba",
+      "Metamodel": "フロー",
+      "SourceId": "56ba5fb5-f59d-4d82-b178-cd0ed4b1b8b7",
+      "TargetId": "0991a7b2-8dd1-4cf8-ae9d-69867245dfb9",
+      "TargetIndex": -1
+    },
+    {
       "Id": "b58e66de-62d4-43ac-af34-4e0f8f168e96",
       "RelationType": "Embed",
       "MetamodelId": "bb1cb16f-462a-4a22-a1cf-8c85ccaa167e",
@@ -73049,6 +73097,16 @@
       "Metamodel": "フロー",
       "SourceId": "0201927e-b725-40c9-a3b9-8430039e63f2",
       "TargetId": "4c3e29ab-38dc-44c6-a44c-338fa4008f2d",
+      "TargetIndex": -1
+    },
+    {
+      "Id": "fa1fd609-3cac-4cb4-bb2a-fdf67c018c18",
+      "RelationType": "Embed",
+      "MetamodelId": "cd4fe24a-522a-4b48-a1a7-78d2dbf75c9c",
+      "Metamodel": "コントロールの所有",
+      "SourceId": "53f40f14-37cb-420c-b349-6588ffa573be",
+      "TargetId": "0991a7b2-8dd1-4cf8-ae9d-69867245dfb9",
+      "SourceIndex": 8,
       "TargetIndex": -1
     },
     {
@@ -74137,6 +74195,54 @@
           "Style": {
             "ViewElementType": "NodeShapeStyle",
             "DefinitionId": "6ab2614a-5669-49e1-bbcc-e360eae71dbd",
+            "UseTheme": false
+          }
+        },
+        {
+          "Id": "f04d1160-aaea-4069-8603-70aebee8585a",
+          "ViewElementType": "SimpleShape",
+          "DefinitionId": "261b7852-62cd-4225-be87-ce0f7c78d9e4",
+          "ModelId": "372a08c7-76f4-4177-bbeb-5b01ad528c86",
+          "RelationshipId": "5f3bae24-c2ed-4d3c-8072-7f470cf62422",
+          "LayoutLevel": 1,
+          "Visible": true,
+          "IsLocked": false,
+          "ZOrder": 22,
+          "IsVisible": true,
+          "LocationX": 576,
+          "LocationY": 374,
+          "MinimizeWidth": 0,
+          "MinimizeHeight": 0,
+          "IsRecurrence": false,
+          "ShowPorts": true,
+          "IsShowingComposites": true,
+          "Style": {
+            "ViewElementType": "NodeShapeStyle",
+            "DefinitionId": "83853ddf-5dd9-4c37-97f8-9f44e21dcefd",
+            "UseTheme": false
+          }
+        },
+        {
+          "Id": "b431f110-ee60-457c-84cb-d9445341ea4d",
+          "ViewElementType": "SimpleShape",
+          "DefinitionId": "261b7852-62cd-4225-be87-ce0f7c78d9e4",
+          "ModelId": "0991a7b2-8dd1-4cf8-ae9d-69867245dfb9",
+          "RelationshipId": "fa1fd609-3cac-4cb4-bb2a-fdf67c018c18",
+          "LayoutLevel": 1,
+          "Visible": true,
+          "IsLocked": false,
+          "ZOrder": 23,
+          "IsVisible": true,
+          "LocationX": 576,
+          "LocationY": 634,
+          "MinimizeWidth": 0,
+          "MinimizeHeight": 0,
+          "IsRecurrence": false,
+          "ShowPorts": true,
+          "IsShowingComposites": true,
+          "Style": {
+            "ViewElementType": "NodeShapeStyle",
+            "DefinitionId": "83853ddf-5dd9-4c37-97f8-9f44e21dcefd",
             "UseTheme": false
           }
         },
@@ -76435,6 +76541,145 @@
               }
             }
           ]
+        },
+        {
+          "Id": "36bfcd5b-d470-4edc-af0b-a2d1bd8a1eaa",
+          "ViewElementType": "ConnectorShape",
+          "DefinitionId": "8ef4927c-6c6d-487d-8937-5ee90ec1373a",
+          "ModelId": "0cec7afd-8a08-47b2-9aac-65bf71a6b74f",
+          "LayoutLevel": 0,
+          "Visible": true,
+          "IsLocked": false,
+          "ZOrder": 0,
+          "IsVisible": true,
+          "SourceId": "1e2291c7-4142-4479-b12f-0482f5023337",
+          "TargetId": "f04d1160-aaea-4069-8603-70aebee8585a",
+          "Bends": "596,316 596,394",
+          "IsInnerRouted": false,
+          "Style": {
+            "ViewElementType": "ConnectorShapeStyle",
+            "DefinitionId": "fc8c07c1-afdc-4259-98d8-d1284fd9c610",
+            "UseTheme": false
+          },
+          "Labels": [
+            {
+              "DefinitionId": "a0164756-de18-4f5c-a288-d46e010cc4ed",
+              "Visible": true,
+              "IsExpanded": true,
+              "TextStyle": {
+                "DefinitionId": "23d86814-8e40-4354-ae0d-b763ced0214b"
+              },
+              "Textual": {
+                "DefinitionId": "bc9a252e-d68e-4095-8b6d-c7c6199cb903",
+                "Visible": true,
+                "IsExpanded": true
+              },
+              "Layout": {
+                "ViewElementType": "ConnectorLabelLayout"
+              }
+            },
+            {
+              "DefinitionId": "c7cd56f3-32bc-462f-b0f7-931755d4cfcc",
+              "Visible": true,
+              "IsExpanded": true,
+              "TextStyle": {
+                "DefinitionId": "d8e18733-f1d9-4ec4-a8f6-d3e4845089f3"
+              },
+              "Textual": {
+                "DefinitionId": "32203bfe-1bd8-42c1-b370-c7bf98f65189",
+                "Visible": true,
+                "IsExpanded": true
+              },
+              "Layout": {
+                "ViewElementType": "ConnectorLabelLayout"
+              }
+            },
+            {
+              "DefinitionId": "e4807ca8-abd0-4452-83d9-bcf4c7797d49",
+              "Visible": true,
+              "IsExpanded": true,
+              "TextStyle": {
+                "DefinitionId": "56d9b624-56ee-4a36-b843-393f346ad5f9"
+              },
+              "Textual": {
+                "DefinitionId": "458054c6-6969-4c68-9f4a-bae6dfd59bdc",
+                "Visible": true,
+                "IsExpanded": true
+              },
+              "Layout": {
+                "ViewElementType": "ConnectorLabelLayout"
+              }
+            }
+          ]
+        },
+        {
+          "Id": "9f0323cb-3053-48e5-bfdd-3bbc6f0a17ad",
+          "ViewElementType": "ConnectorShape",
+          "DefinitionId": "8ef4927c-6c6d-487d-8937-5ee90ec1373a",
+          "ModelId": "b552049f-8487-49dc-a21e-371ff17cec4d",
+          "LayoutLevel": 0,
+          "Visible": true,
+          "IsLocked": false,
+          "ZOrder": 0,
+          "IsVisible": true,
+          "SourceId": "39ea33ef-a9ef-4160-8b28-ac3e774df87c",
+          "TargetId": "b431f110-ee60-457c-84cb-d9445341ea4d",
+          "IsInnerRouted": false,
+          "Style": {
+            "ViewElementType": "ConnectorShapeStyle",
+            "DefinitionId": "fc8c07c1-afdc-4259-98d8-d1284fd9c610",
+            "UseTheme": false
+          },
+          "Labels": [
+            {
+              "DefinitionId": "a0164756-de18-4f5c-a288-d46e010cc4ed",
+              "Visible": true,
+              "IsExpanded": true,
+              "TextStyle": {
+                "DefinitionId": "23d86814-8e40-4354-ae0d-b763ced0214b"
+              },
+              "Textual": {
+                "DefinitionId": "bc9a252e-d68e-4095-8b6d-c7c6199cb903",
+                "Visible": true,
+                "IsExpanded": true
+              },
+              "Layout": {
+                "ViewElementType": "ConnectorLabelLayout"
+              }
+            },
+            {
+              "DefinitionId": "c7cd56f3-32bc-462f-b0f7-931755d4cfcc",
+              "Visible": true,
+              "IsExpanded": true,
+              "TextStyle": {
+                "DefinitionId": "d8e18733-f1d9-4ec4-a8f6-d3e4845089f3"
+              },
+              "Textual": {
+                "DefinitionId": "32203bfe-1bd8-42c1-b370-c7bf98f65189",
+                "Visible": true,
+                "IsExpanded": true
+              },
+              "Layout": {
+                "ViewElementType": "ConnectorLabelLayout"
+              }
+            },
+            {
+              "DefinitionId": "e4807ca8-abd0-4452-83d9-bcf4c7797d49",
+              "Visible": true,
+              "IsExpanded": true,
+              "TextStyle": {
+                "DefinitionId": "56d9b624-56ee-4a36-b843-393f346ad5f9"
+              },
+              "Textual": {
+                "DefinitionId": "458054c6-6969-4c68-9f4a-bae6dfd59bdc",
+                "Visible": true,
+                "IsExpanded": true
+              },
+              "Layout": {
+                "ViewElementType": "ConnectorLabelLayout"
+              }
+            }
+          ]
         }
       ],
       "Layout": {
@@ -78419,6 +78664,7 @@
           "IsVisible": true,
           "SourceId": "de8be7ee-4604-4483-b83a-79ad7bb2c127",
           "TargetId": "4e164051-5fe4-4420-b8bc-1179247da5f5",
+          "Bends": "294,558 294,622 295,622 295,662",
           "IsInnerRouted": false,
           "Style": {
             "ViewElementType": "ConnectorShapeStyle",
@@ -78977,6 +79223,7 @@
           "IsVisible": true,
           "SourceId": "ebb01721-6bd8-49af-af6e-470c01f0b81e",
           "TargetId": "93a99a14-a2f7-4077-8cc9-67c065c1ba5d",
+          "Bends": "295,835 473,835 473,834 640,834",
           "IsInnerRouted": false,
           "Style": {
             "ViewElementType": "ConnectorShapeStyle",
