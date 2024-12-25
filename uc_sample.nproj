@@ -69797,6 +69797,30 @@
       }
     },
     {
+      "Id": "06b83087-bbac-4336-9fad-ea4c0effe0df",
+      "EntityType": "Entity",
+      "Name": "OP-PFに通知できない場合",
+      "MetamodelId": "c2dd134e-bb0c-4cdb-8b98-e5dc589bf031",
+      "Metamodel": "フロー",
+      "Fields": {
+        "Name": "OP-PFに通知できない場合",
+        "フロー区分": "代替フロー",
+        "ID": "AF1"
+      }
+    },
+    {
+      "Id": "06c1e325-d7d4-407b-9cc8-5aae57516f93",
+      "EntityType": "Entity",
+      "Name": "本ユースケースを終了する",
+      "MetamodelId": "a5b906ee-1344-46df-858d-cb1c611b378e",
+      "Metamodel": "ステップ",
+      "Fields": {
+        "Name": "本ユースケースを終了する",
+        "フローID": "MF5",
+        "シナリオ": "本ユースケースを終了する"
+      }
+    },
+    {
       "Id": "0879d57b-1aa2-4c65-9d54-d0ce68727d14",
       "EntityType": "Entity",
       "Name": "MF7\r\nユーザー(:リーダー)運行担当者にAWVの充電完了を通知する",
@@ -69991,6 +70015,19 @@
       }
     },
     {
+      "Id": "1e74e116-9e3b-498b-b0c7-1e5641eff5e4",
+      "EntityType": "Entity",
+      "Name": "基本フロー",
+      "MetamodelId": "c2dd134e-bb0c-4cdb-8b98-e5dc589bf031",
+      "Metamodel": "フロー",
+      "Fields": {
+        "Name": "基本フロー",
+        "Description": "基本フロー",
+        "フロー区分": "基本フロー",
+        "ID": "MF"
+      }
+    },
+    {
       "Id": "2068fbeb-235e-44c6-b5d3-8df7881fd7b1",
       "EntityType": "Entity",
       "Name": "決定",
@@ -70001,6 +70038,16 @@
       }
     },
     {
+      "Id": "21a4950c-de79-4138-b917-f02dcf82d8f6",
+      "EntityType": "Entity",
+      "Name": "AWVが起動していない",
+      "MetamodelId": "727b0117-9ec7-4113-8bd1-7e823b923dd5",
+      "Metamodel": "条件",
+      "Fields": {
+        "Name": "AWVが起動していない"
+      }
+    },
+    {
       "Id": "26058775-5a00-44c9-8fe8-43730eff9a0c",
       "EntityType": "Entity",
       "Name": "決定",
@@ -70008,6 +70055,16 @@
       "Metamodel": "決定",
       "Fields": {
         "Name": "決定"
+      }
+    },
+    {
+      "Id": "27515eee-3345-425c-b1a0-0bab075ba4c0",
+      "EntityType": "Entity",
+      "Name": "AWVが起動している",
+      "MetamodelId": "727b0117-9ec7-4113-8bd1-7e823b923dd5",
+      "Metamodel": "条件",
+      "Fields": {
+        "Name": "AWVが起動している"
       }
     },
     {
@@ -70290,6 +70347,20 @@
       }
     },
     {
+      "Id": "57a4b719-cd11-4230-82c9-799d23cbc9db",
+      "EntityType": "Entity",
+      "Name": "AWVを終了する",
+      "MetamodelId": "6905cea9-caab-4594-86af-bf4ec050e8bc",
+      "Metamodel": "ユースケース",
+      "Fields": {
+        "Name": "AWVを終了する",
+        "Description": "AWVを終了する",
+        "Visibility": "Public",
+        "IsFinal": false,
+        "IsAbstract": false
+      }
+    },
+    {
       "Id": "5bbb1d1e-5085-49db-99b7-581bd68b5189",
       "EntityType": "Entity",
       "Name": "ステップ",
@@ -70363,6 +70434,20 @@
       }
     },
     {
+      "Id": "679045d1-3854-4706-bb00-963aa89d2871",
+      "EntityType": "Entity",
+      "Name": "OP-PFにAWV終了通知を送信する",
+      "MetamodelId": "a5b906ee-1344-46df-858d-cb1c611b378e",
+      "Metamodel": "ステップ",
+      "Fields": {
+        "Name": "OP-PFにAWV終了通知を送信する",
+        "フローID": "MF3",
+        "シナリオ": "AWVは、OP-PFにAWV終了通知を送信する",
+        "分岐": "AF1",
+        "備考": "OP-PFは通信途絶にてAWVのofflineを判定"
+      }
+    },
+    {
       "Id": "69b3fe25-7d1a-44e8-95af-3242a32574da",
       "EntityType": "Entity",
       "Name": "アクター",
@@ -70370,6 +70455,19 @@
       "Metamodel": "パッケージ",
       "Fields": {
         "Name": "アクター"
+      }
+    },
+    {
+      "Id": "6d72e0df-a00e-4609-b5f7-28aaa325c3ba",
+      "EntityType": "Entity",
+      "Name": "セキュリティロックの操作を行う",
+      "MetamodelId": "a5b906ee-1344-46df-858d-cb1c611b378e",
+      "Metamodel": "ステップ",
+      "Fields": {
+        "Name": "セキュリティロックの操作を行う",
+        "フローID": "MF4",
+        "シナリオ": "ユーザー(:リーダー)設備担当者はセキュリティロックの操作を行う",
+        "備考": "ユーザー(:リーダー)設備担当者はIGキーを抜く"
       }
     },
     {
@@ -70499,6 +70597,19 @@
       }
     },
     {
+      "Id": "7fd737a3-94df-4c55-b7e9-c30c95dcafba",
+      "EntityType": "Entity",
+      "Name": "ユーザー(:リーダー)設備担当者にAWV終了を通知する",
+      "MetamodelId": "a5b906ee-1344-46df-858d-cb1c611b378e",
+      "Metamodel": "ステップ",
+      "Fields": {
+        "Name": "ユーザー(:リーダー)設備担当者にAWV終了を通知する",
+        "フローID": "MF2",
+        "シナリオ": "AWVは、ユーザー(:リーダー)設備担当者にAWV終了を通知する",
+        "備考": "CANメータで終了中の画面を表示後ブラックアウト"
+      }
+    },
+    {
       "Id": "8235be01-64f6-4253-b781-442b8e1a57c6",
       "EntityType": "Entity",
       "Name": "AF1-1\r\nユーザー(:リーダー)設備担当者にAWVの通信不可を通知する\r\n",
@@ -70549,6 +70660,19 @@
       "Metamodel": "アクティビティ図",
       "Fields": {
         "Name": "EF4 電源ONの状態のAWVに充電ソケットを取り付けた場合\r\n"
+      }
+    },
+    {
+      "Id": "8a7424ac-8fe6-48c6-ab87-9dc79e7cc51c",
+      "EntityType": "Entity",
+      "Name": "終了の操作を行う",
+      "MetamodelId": "a5b906ee-1344-46df-858d-cb1c611b378e",
+      "Metamodel": "ステップ",
+      "Fields": {
+        "Name": "終了の操作を行う",
+        "フローID": "MF1",
+        "シナリオ": "ユーザー(:リーダー)設備担当者は、AWV終了の操作を行う",
+        "備考": "ユーザー(:リーダー)設備担当者はIGをOFFにする"
       }
     },
     {
@@ -70843,6 +70967,19 @@
       "Metamodel": "条件",
       "Fields": {
         "Name": "充電器が充電設備に接続されている"
+      }
+    },
+    {
+      "Id": "b6b9c7e7-21e1-46f3-8637-378b1b563a54",
+      "EntityType": "Entity",
+      "Name": "MF3に戻る",
+      "MetamodelId": "a5b906ee-1344-46df-858d-cb1c611b378e",
+      "Metamodel": "ステップ",
+      "Fields": {
+        "Name": "MF3に戻る",
+        "フローID": "AF1-1",
+        "シナリオ": "MF3に戻る",
+        "備考": "終了時の通信断は無視する"
       }
     },
     {
@@ -71342,12 +71479,31 @@
       "IsDerivation": true
     },
     {
+      "Id": "0fef5ab6-2bc9-4ee4-ba43-65dee3cc6766",
+      "RelationType": "Embed",
+      "MetamodelId": "6cf13842-1a16-49e1-b85e-0f7011a58359",
+      "Metamodel": "シナリオの所有",
+      "SourceId": "57a4b719-cd11-4230-82c9-799d23cbc9db",
+      "TargetId": "06b83087-bbac-4336-9fad-ea4c0effe0df",
+      "SourceIndex": 1,
+      "TargetIndex": -1
+    },
+    {
       "Id": "11db7069-965d-4528-b593-e31544725e3c",
       "RelationType": "Ref",
       "MetamodelId": "742f1da8-2079-4a90-809c-e3ef2eb599ba",
       "Metamodel": "フロー",
       "SourceId": "f7f9c4b5-bd66-4c7c-9a72-9135f96073d0",
       "TargetId": "0201927e-b725-40c9-a3b9-8430039e63f2",
+      "TargetIndex": -1
+    },
+    {
+      "Id": "1226ad6b-788a-4c45-a19c-0320c608753b",
+      "RelationType": "Embed",
+      "MetamodelId": "6cf13842-1a16-49e1-b85e-0f7011a58359",
+      "Metamodel": "シナリオの所有",
+      "SourceId": "57a4b719-cd11-4230-82c9-799d23cbc9db",
+      "TargetId": "1e74e116-9e3b-498b-b0c7-1e5641eff5e4",
       "TargetIndex": -1
     },
     {
@@ -71368,6 +71524,16 @@
       "SourceId": "53f40f14-37cb-420c-b349-6588ffa573be",
       "TargetId": "56ba5fb5-f59d-4d82-b178-cd0ed4b1b8b7",
       "SourceIndex": 13,
+      "TargetIndex": -1
+    },
+    {
+      "Id": "16c44c1e-bef4-41fe-980e-d4bf133740e0",
+      "RelationType": "Embed",
+      "MetamodelId": "6259f444-ddd2-4f23-951e-8793a8ad3897",
+      "Metamodel": "ステップの所有",
+      "SourceId": "1e74e116-9e3b-498b-b0c7-1e5641eff5e4",
+      "TargetId": "6d72e0df-a00e-4609-b5f7-28aaa325c3ba",
+      "SourceIndex": 3,
       "TargetIndex": -1
     },
     {
@@ -71765,6 +71931,16 @@
       "TargetIndex": -1
     },
     {
+      "Id": "41ee7b07-59a9-4b19-b3d6-4f5487f00625",
+      "RelationType": "Embed",
+      "MetamodelId": "6259f444-ddd2-4f23-951e-8793a8ad3897",
+      "Metamodel": "ステップの所有",
+      "SourceId": "1e74e116-9e3b-498b-b0c7-1e5641eff5e4",
+      "TargetId": "7fd737a3-94df-4c55-b7e9-c30c95dcafba",
+      "SourceIndex": 1,
+      "TargetIndex": -1
+    },
+    {
       "Id": "4312650d-b669-4030-bca4-68aeaf5ae1ad",
       "RelationType": "Embed",
       "MetamodelId": "c175914e-97c9-4f27-8d59-746caf83ea2d",
@@ -71801,6 +71977,25 @@
       "Metamodel": "コントロールの所有",
       "SourceId": "528f013e-17ec-49e9-a45f-f2774dcf3e46",
       "TargetId": "2068fbeb-235e-44c6-b5d3-8df7881fd7b1",
+      "SourceIndex": 1,
+      "TargetIndex": -1
+    },
+    {
+      "Id": "46c6209d-6970-45d6-b91d-0e0b5954c856",
+      "RelationType": "Embed",
+      "MetamodelId": "bc505d96-3edd-4526-addb-165af196f58c",
+      "Metamodel": "条件の所有",
+      "SourceId": "57a4b719-cd11-4230-82c9-799d23cbc9db",
+      "TargetId": "21a4950c-de79-4138-b917-f02dcf82d8f6",
+      "TargetIndex": -1
+    },
+    {
+      "Id": "4a60027d-8e53-4053-a579-ed3d55c2841e",
+      "RelationType": "Embed",
+      "MetamodelId": "bb1cb16f-462a-4a22-a1cf-8c85ccaa167e",
+      "Metamodel": "パッケージ化可能要素の所有",
+      "SourceId": "e1b8dda5-a5f9-435f-b794-5fd448b89d50",
+      "TargetId": "57a4b719-cd11-4230-82c9-799d23cbc9db",
       "SourceIndex": 1,
       "TargetIndex": -1
     },
@@ -72268,6 +72463,15 @@
       "TargetIndex": -1
     },
     {
+      "Id": "8e4e915a-f3c3-4273-95b5-ebc4bffabcbe",
+      "RelationType": "Embed",
+      "MetamodelId": "6259f444-ddd2-4f23-951e-8793a8ad3897",
+      "Metamodel": "ステップの所有",
+      "SourceId": "1e74e116-9e3b-498b-b0c7-1e5641eff5e4",
+      "TargetId": "8a7424ac-8fe6-48c6-ab87-9dc79e7cc51c",
+      "TargetIndex": -1
+    },
+    {
       "Id": "8fb01a85-4d23-40e3-80dc-77fbebe26d3d",
       "RelationType": "Embed",
       "MetamodelId": "6cf13842-1a16-49e1-b85e-0f7011a58359",
@@ -72656,6 +72860,25 @@
       "TargetIndex": -1
     },
     {
+      "Id": "b85ec875-470b-46c1-850d-3b49b9045067",
+      "RelationType": "Embed",
+      "MetamodelId": "6259f444-ddd2-4f23-951e-8793a8ad3897",
+      "Metamodel": "ステップの所有",
+      "SourceId": "1e74e116-9e3b-498b-b0c7-1e5641eff5e4",
+      "TargetId": "679045d1-3854-4706-bb00-963aa89d2871",
+      "SourceIndex": 2,
+      "TargetIndex": -1
+    },
+    {
+      "Id": "ba2f1eef-1921-43b5-8878-9da351fce352",
+      "RelationType": "Embed",
+      "MetamodelId": "6259f444-ddd2-4f23-951e-8793a8ad3897",
+      "Metamodel": "ステップの所有",
+      "SourceId": "06b83087-bbac-4336-9fad-ea4c0effe0df",
+      "TargetId": "b6b9c7e7-21e1-46f3-8637-378b1b563a54",
+      "TargetIndex": -1
+    },
+    {
       "Id": "bd162b42-c6a7-4686-a037-9d383745e577",
       "RelationType": "Ref",
       "MetamodelId": "742f1da8-2079-4a90-809c-e3ef2eb599ba",
@@ -72855,6 +73078,25 @@
       "SourceId": "38256a24-4b73-4aec-88a5-acbace36a9b4",
       "TargetId": "b6316cb0-1875-41e0-9a0d-70bdbd57dd48",
       "SourceIndex": 2,
+      "TargetIndex": -1
+    },
+    {
+      "Id": "d4bb463e-7239-47b9-b811-7da91d5151f7",
+      "RelationType": "Embed",
+      "MetamodelId": "6259f444-ddd2-4f23-951e-8793a8ad3897",
+      "Metamodel": "ステップの所有",
+      "SourceId": "1e74e116-9e3b-498b-b0c7-1e5641eff5e4",
+      "TargetId": "06c1e325-d7d4-407b-9cc8-5aae57516f93",
+      "SourceIndex": 4,
+      "TargetIndex": -1
+    },
+    {
+      "Id": "d5c59cc0-0eee-4870-85ec-817fe4bfa836",
+      "RelationType": "Embed",
+      "MetamodelId": "6af7e1d3-b08d-49a7-9ba3-def14696c42f",
+      "Metamodel": "条件の所有",
+      "SourceId": "57a4b719-cd11-4230-82c9-799d23cbc9db",
+      "TargetId": "27515eee-3345-425c-b1a0-0bab075ba4c0",
       "TargetIndex": -1
     },
     {
@@ -73107,6 +73349,15 @@
       "TargetId": "cf3a2579-b732-4c61-b1dc-e7649f679c79",
       "TargetIndex": -1,
       "IsDerivation": true
+    },
+    {
+      "Id": "f27bae83-c6a8-42db-b482-b26d6e641799",
+      "RelationType": "Ref",
+      "MetamodelId": "d53f8941-2132-48aa-9988-f1aa2860c542",
+      "Metamodel": "アクター関連",
+      "SourceId": "57a4b719-cd11-4230-82c9-799d23cbc9db",
+      "TargetId": "0328eea6-32c7-4baa-8230-c52796f4b8d6",
+      "TargetIndex": -1
     },
     {
       "Id": "f3665a21-6d07-4377-9cf8-8e75559d57f3",
@@ -77603,6 +77854,45 @@
       "LayoutLevel": 0,
       "Nodes": [
         {
+          "Id": "6052c558-c0e4-4de7-90ec-7afc82b30370",
+          "ViewElementType": "SimpleShape",
+          "DefinitionId": "ecd319b7-7deb-4675-acbb-3048cc4ed053",
+          "ModelId": "57a4b719-cd11-4230-82c9-799d23cbc9db",
+          "LayoutLevel": 1,
+          "Visible": true,
+          "IsLocked": false,
+          "ZOrder": 3,
+          "IsVisible": true,
+          "LocationX": 235,
+          "LocationY": 230,
+          "MinimizeWidth": 0,
+          "MinimizeHeight": 0,
+          "IsRecurrence": false,
+          "ShowPorts": true,
+          "IsShowingComposites": true,
+          "Style": {
+            "ViewElementType": "NodeShapeStyle",
+            "DefinitionId": "95121a21-8a8f-4f78-9a93-c78871ebeb8c",
+            "UseTheme": false
+          },
+          "Title": {
+            "DefinitionId": "bf97dc83-19f4-4c45-bfe0-f74441bcc33c",
+            "Visible": true,
+            "IsExpanded": true,
+            "Style": {
+              "DefinitionId": "9fa66d91-8cda-41da-b415-1481020839ed"
+            }
+          },
+          "Category": {
+            "DefinitionId": "addfcccc-a12f-4526-b147-76c542f3e704",
+            "Visible": true,
+            "IsExpanded": true,
+            "Style": {
+              "DefinitionId": "e63b620a-19e6-4736-9e20-08ce2d60457c"
+            }
+          }
+        },
+        {
           "Id": "b4516a5c-986e-4272-86db-ea741f526a9c",
           "ViewElementType": "SimpleShape",
           "DefinitionId": "be29fc96-1cbf-48b7-91cb-17843d400789",
@@ -77822,6 +78112,59 @@
           "IsVisible": true,
           "SourceId": "b24be469-4c57-49bb-be60-bef278d4c3c6",
           "TargetId": "b4516a5c-986e-4272-86db-ea741f526a9c",
+          "IsInnerRouted": false,
+          "Style": {
+            "ViewElementType": "ConnectorShapeStyle",
+            "DefinitionId": "2bd37240-4d22-45d4-b697-51edfab20b6d",
+            "UseTheme": false
+          },
+          "Labels": [
+            {
+              "DefinitionId": "331b44ac-53ce-4b9e-af12-1ea1f7adfb86",
+              "Visible": true,
+              "IsExpanded": true,
+              "TextStyle": {
+                "DefinitionId": "3318df03-98f5-4aa6-8d4a-8286b10b7d74"
+              },
+              "Textual": {
+                "DefinitionId": "3b58556f-f63f-42b1-8a0a-7fa70258f0c9",
+                "Visible": true,
+                "IsExpanded": true
+              },
+              "Layout": {
+                "ViewElementType": "ConnectorLabelLayout"
+              }
+            },
+            {
+              "DefinitionId": "4372d340-20d3-4e7d-ad03-5013fe7b8e4c",
+              "Visible": true,
+              "IsExpanded": true,
+              "TextStyle": {
+                "DefinitionId": "49f69ac0-e965-4a29-a9fa-f20fe409fc5a"
+              },
+              "Textual": {
+                "DefinitionId": "8d9d94a9-e809-403d-a4f9-96d4403e788e",
+                "Visible": true,
+                "IsExpanded": true
+              },
+              "Layout": {
+                "ViewElementType": "ConnectorLabelLayout"
+              }
+            }
+          ]
+        },
+        {
+          "Id": "e6efcd2d-b35a-42a8-a28c-b4d30d69eacd",
+          "ViewElementType": "ConnectorShape",
+          "DefinitionId": "27d2fcb7-7c41-4068-9d4d-9d9ffc73a35b",
+          "ModelId": "f27bae83-c6a8-42db-b482-b26d6e641799",
+          "LayoutLevel": 0,
+          "Visible": true,
+          "IsLocked": false,
+          "ZOrder": 0,
+          "IsVisible": true,
+          "SourceId": "6052c558-c0e4-4de7-90ec-7afc82b30370",
+          "TargetId": "f91f17cd-95c9-4802-887b-42696ae40a08",
           "IsInnerRouted": false,
           "Style": {
             "ViewElementType": "ConnectorShapeStyle",
