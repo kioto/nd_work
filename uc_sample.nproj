@@ -31342,6 +31342,44 @@
                     "ColumnControlType": "Text"
                   }
                 ]
+              },
+              {
+                "ControlType": "Grid",
+                "Id": "fc8e3944-e519-404c-a406-64ba78a808a2",
+                "DisplayName": "パッケージ管理要素",
+                "Name": "OwnedElements",
+                "ShowIcon": false,
+                "IsReadOnly": false,
+                "Path": "OwnedElements",
+                "IsReference": false,
+                "HasPathMultipleSteps": false,
+                "ShowTitle": true,
+                "ShowTitleIcon": false,
+                "ShowGridLine": false,
+                "BulletType": "Number",
+                "RowHeight": "Auto",
+                "Columns": [
+                  {
+                    "ControlType": "GridColumn",
+                    "Id": "bf52ed79-75d6-44d3-a47f-754d7c37b601",
+                    "DisplayName": "名前",
+                    "Name": "Name",
+                    "MetamodelId": "3687492a-86a9-486c-ab16-e86629295f59",
+                    "ShowIcon": false,
+                    "IsReadOnly": false,
+                    "Path": "Name",
+                    "IsReference": false,
+                    "HasPathMultipleSteps": false,
+                    "ShowTitle": true,
+                    "ShowTitleIcon": false,
+                    "ShowGridLine": false,
+                    "Width": 100,
+                    "MinWidth": 40,
+                    "Order": 0,
+                    "ColumnControlId": "38554b03-7d47-4d9c-916a-294401ec4908",
+                    "ColumnControlType": "Text"
+                  }
+                ]
               }
             ]
           },
@@ -70325,6 +70363,16 @@
       }
     },
     {
+      "Id": "69b3fe25-7d1a-44e8-95af-3242a32574da",
+      "EntityType": "Entity",
+      "Name": "アクター",
+      "MetamodelId": "3abb4e42-e8fd-49a9-a8b4-0e432fc94e3e",
+      "Metamodel": "パッケージ",
+      "Fields": {
+        "Name": "アクター"
+      }
+    },
+    {
       "Id": "6d7316db-48c2-4eaa-9a07-4352f1e274bf",
       "EntityType": "Entity",
       "Name": "終了する",
@@ -71025,6 +71073,16 @@
       }
     },
     {
+      "Id": "e1b8dda5-a5f9-435f-b794-5fd448b89d50",
+      "EntityType": "Entity",
+      "Name": "ユースケース",
+      "MetamodelId": "3abb4e42-e8fd-49a9-a8b4-0e432fc94e3e",
+      "Metamodel": "パッケージ",
+      "Fields": {
+        "Name": "ユースケース"
+      }
+    },
+    {
       "Id": "e65baafb-7d92-455e-9496-0e7cf8e267d5",
       "EntityType": "Entity",
       "Name": "char",
@@ -71369,6 +71427,15 @@
       "TargetIndex": -1
     },
     {
+      "Id": "1a9a89a7-d7c9-449f-b8f3-6c2d326dbc15",
+      "RelationType": "Embed",
+      "MetamodelId": "c0a30aee-6b86-4346-8cfd-e62a9112d06c",
+      "Metamodel": "パッケージコンポジション",
+      "SourceId": "a1854328-dc99-4f0e-8d9d-6d7c88726b93",
+      "TargetId": "69b3fe25-7d1a-44e8-95af-3242a32574da",
+      "TargetIndex": -1
+    },
+    {
       "Id": "1c72015c-4af2-44f4-9dd7-5bb5792e9f84",
       "RelationType": "Ref",
       "MetamodelId": "742f1da8-2079-4a90-809c-e3ef2eb599ba",
@@ -71453,6 +71520,16 @@
       "SourceId": "53f40f14-37cb-420c-b349-6588ffa573be",
       "TargetId": "7a88943b-6689-49a1-b9aa-464501d86235",
       "SourceIndex": 8,
+      "TargetIndex": -1
+    },
+    {
+      "Id": "25da1cc9-6ca1-4037-8f16-5023c4172949",
+      "RelationType": "Embed",
+      "MetamodelId": "c0a30aee-6b86-4346-8cfd-e62a9112d06c",
+      "Metamodel": "パッケージコンポジション",
+      "SourceId": "a1854328-dc99-4f0e-8d9d-6d7c88726b93",
+      "TargetId": "e1b8dda5-a5f9-435f-b794-5fd448b89d50",
+      "SourceIndex": 1,
       "TargetIndex": -1
     },
     {
@@ -72368,7 +72445,7 @@
       "RelationType": "Embed",
       "MetamodelId": "bb1cb16f-462a-4a22-a1cf-8c85ccaa167e",
       "Metamodel": "パッケージ化可能要素の所有",
-      "SourceId": "a1854328-dc99-4f0e-8d9d-6d7c88726b93",
+      "SourceId": "e1b8dda5-a5f9-435f-b794-5fd448b89d50",
       "TargetId": "38256a24-4b73-4aec-88a5-acbace36a9b4",
       "TargetIndex": -1
     },
@@ -72917,9 +72994,8 @@
       "RelationType": "Embed",
       "MetamodelId": "bb1cb16f-462a-4a22-a1cf-8c85ccaa167e",
       "Metamodel": "パッケージ化可能要素の所有",
-      "SourceId": "a1854328-dc99-4f0e-8d9d-6d7c88726b93",
+      "SourceId": "69b3fe25-7d1a-44e8-95af-3242a32574da",
       "TargetId": "cf3a2579-b732-4c61-b1dc-e7649f679c79",
-      "SourceIndex": 2,
       "TargetIndex": -1
     },
     {
@@ -73124,7 +73200,7 @@
       "RelationType": "Embed",
       "MetamodelId": "bb1cb16f-462a-4a22-a1cf-8c85ccaa167e",
       "Metamodel": "パッケージ化可能要素の所有",
-      "SourceId": "a1854328-dc99-4f0e-8d9d-6d7c88726b93",
+      "SourceId": "69b3fe25-7d1a-44e8-95af-3242a32574da",
       "TargetId": "0328eea6-32c7-4baa-8230-c52796f4b8d6",
       "SourceIndex": 1,
       "TargetIndex": -1
