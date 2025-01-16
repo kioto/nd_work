@@ -10683,17 +10683,6 @@
                     "DisplayName": "シナリオ"
                   },
                   {
-                    "Id": "ad4759c4-95e8-431a-9609-d616e43f13d5",
-                    "FieldType": "Property",
-                    "Name": "分岐",
-                    "Unique": true,
-                    "LowerBound": 1,
-                    "UpperBound": 1,
-                    "ValueTypeName": "String",
-                    "ValueTypeKind": "Primitive",
-                    "DisplayName": "分岐先フロー"
-                  },
-                  {
                     "Id": "a379c8c4-89cc-48c3-9869-6bc55c10b6b5",
                     "FieldType": "Property",
                     "Name": "備考",
@@ -11062,6 +11051,67 @@
                   "ValueTypeKind": "Class",
                   "ValueTypeId": "c2dd134e-bb0c-4cdb-8b98-e5dc589bf031"
                 }
+              },
+              {
+                "Id": "88613085-b7de-413b-bd9b-50d235d1fd32",
+                "TypeKind": "Class",
+                "Name": "エンティティ_1",
+                "DisplayName": "エンティティ_1",
+                "Tags": [
+                  {
+                    "Name": "System.ShowInModelNavigator",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.ShowInTracePage",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.IsUnitizable",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.Type",
+                    "Value": "Entity"
+                  }
+                ],
+                "Fields": [
+                  {
+                    "Id": "71695383-03ab-4827-bd2c-ac61ee4d9ddd",
+                    "FieldType": "Property",
+                    "Name": "Name",
+                    "Override": true,
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "名前",
+                    "Tags": [
+                      {
+                        "Name": "System.Name",
+                        "Value": "true"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "08196407-2f6a-4c76-86d4-3321f80b932f",
+                    "FieldType": "Property",
+                    "Name": "Description",
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "説明",
+                    "Tags": [
+                      {
+                        "Name": "System.Description",
+                        "Value": "true"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -34031,26 +34081,6 @@
                   },
                   {
                     "ControlType": "GridColumn",
-                    "Id": "7a69648f-4c91-40bf-88fd-c92bf8cd4db8",
-                    "DisplayName": "分岐",
-                    "Name": "分岐",
-                    "MetamodelId": "a5b906ee-1344-46df-858d-cb1c611b378e",
-                    "ShowIcon": false,
-                    "IsReadOnly": false,
-                    "Path": "分岐",
-                    "IsReference": false,
-                    "HasPathMultipleSteps": false,
-                    "ShowTitle": true,
-                    "ShowTitleIcon": false,
-                    "ShowGridLine": false,
-                    "Width": 100,
-                    "MinWidth": 40,
-                    "Order": 0,
-                    "ColumnControlId": "9b91b58c-9c06-440f-b019-b9b8d85f0301",
-                    "ColumnControlType": "Text"
-                  },
-                  {
-                    "ControlType": "GridColumn",
                     "Id": "da33f9b8-e1af-46ec-9fbf-67aa5ca9c7de",
                     "DisplayName": "備考",
                     "Name": "備考",
@@ -49162,20 +49192,6 @@
               },
               {
                 "ControlType": "Text",
-                "Id": "6fc65f62-ca9f-4f19-93ea-2de330e5603f",
-                "DisplayName": "分岐",
-                "Name": "分岐",
-                "ShowIcon": false,
-                "IsReadOnly": false,
-                "Path": "分岐",
-                "IsReference": false,
-                "HasPathMultipleSteps": false,
-                "ShowTitle": true,
-                "ShowTitleIcon": false,
-                "ShowGridLine": false
-              },
-              {
-                "ControlType": "Text",
                 "Id": "f2628900-5c4e-417d-9ddf-77fa565d2d00",
                 "DisplayName": "備考",
                 "Name": "備考",
@@ -61119,6 +61135,54 @@
           "IsReadOnly": false,
           "DisplayTarget": "Both",
           "EditorTypeId": "NextDesign.StateTransitionTable"
+        },
+        {
+          "ViewType": "Form",
+          "Id": "cbe277fb-6f69-453c-94e0-3c9878c91412",
+          "DisplayName": "詳細",
+          "Name": "Detail",
+          "MetamodelId": "88613085-b7de-413b-bd9b-50d235d1fd32",
+          "ShowIcon": false,
+          "IsReadOnly": false,
+          "DisplayTarget": "Both",
+          "ShowTitle": false,
+          "OutlineNumberLevel": 0,
+          "AutoGenerated": false,
+          "FixColumnIndex": 0,
+          "RootControl": {
+            "ControlType": "EntityControl",
+            "Id": "8085dcdf-2225-4224-aa31-1c4d7599625a",
+            "Name": "エンティティ_1",
+            "MetamodelId": "88613085-b7de-413b-bd9b-50d235d1fd32",
+            "ShowIcon": false,
+            "IsReadOnly": false,
+            "IsReference": false,
+            "HasPathMultipleSteps": false,
+            "ShowTitle": true,
+            "ShowTitleIcon": false,
+            "ShowGridLine": false,
+            "TitleBindingPath": "Name",
+            "Controls": [
+              {
+                "ControlType": "Text",
+                "Id": "f2ef8e34-819f-4e56-a2d1-96612a73d048",
+                "DisplayName": "説明",
+                "Name": "Description",
+                "ShowIcon": false,
+                "IsReadOnly": false,
+                "Path": "Description",
+                "IsReference": false,
+                "HasPathMultipleSteps": false,
+                "ShowTitle": true,
+                "ShowTitleIcon": false,
+                "ShowGridLine": false
+              }
+            ]
+          },
+          "Layout": {
+            "ViewElementType": "DocumentLayout",
+            "TitleWidth": 250
+          }
         }
       ]
     }
@@ -68450,6 +68514,19 @@
           "ForeColor": "#FFFFFF",
           "BackColor": "#FF7030A0",
           "BorderColor": "#000000"
+        },
+        {
+          "Id": "8836a792-915a-4c89-a5a7-7e8c1a00eccc",
+          "LocationX": 641.5,
+          "LocationY": 346.4,
+          "ZOrder": 19,
+          "Width": 120,
+          "Height": 80,
+          "NodeType": "Entity",
+          "MetamodelId": "88613085-b7de-413b-bd9b-50d235d1fd32",
+          "ForeColor": "#FFFFFF",
+          "BackColor": "#498ABC",
+          "BorderColor": "#000000"
         }
       ],
       "Connectors": [
@@ -70073,7 +70150,6 @@
         "Description": "ユーザー(:リーダー)設備担当者は、AWVシステムに充電ソケットを取り付ける",
         "フローID": "MF1",
         "シナリオ": "ユーザー(:リーダー)設備担当者は、AWVシステムに充電ソケットを取り付ける",
-        "分岐": "",
         "備考": "・充電ソケットは扉を開いてから挿す"
       }
     },
@@ -70096,8 +70172,7 @@
       "Fields": {
         "Name": "ユーザー(:リーダー)運行担当者にAWVの充電中を通知する",
         "フローID": "MF5",
-        "シナリオ": "AWVシステムは、ユーザー(:リーダー)運行担当者にAWVの充電中を通知する",
-        "分岐": "AF1"
+        "シナリオ": "AWVシステムは、ユーザー(:リーダー)運行担当者にAWVの充電中を通知する"
       }
     },
     {
@@ -70205,7 +70280,6 @@
         "Name": "ユーザー(:リーダー)設備担当者にAWVの終了を通知する",
         "フローID": "MF9",
         "シナリオ": "AWVシステムは、ユーザー(:リーダー)設備担当者にAWVの終了を通知する",
-        "分岐": "",
         "備考": ""
       }
     },
@@ -70571,7 +70645,6 @@
         "Name": "OP-PFにAWV終了通知を送信する",
         "フローID": "MF3",
         "シナリオ": "AWVは、OP-PFにAWV終了通知を送信する",
-        "分岐": "AF1",
         "備考": "OP-PFは通信途絶にてAWVのofflineを判定"
       }
     },
@@ -70630,7 +70703,6 @@
         "Name": "ユーザー(:リーダー)設備担当者にAWVの充電中を通知する",
         "フローID": "MF4",
         "シナリオ": "AWVシステムは、ユーザー(:リーダー)設備担当者にAWVの充電中を通知する",
-        "分岐": "EF1",
         "備考": "・充電中にOTAが行われる場合がある\n・充電中に経路地図ダウンロードが行われる場合がある"
       }
     },
@@ -70766,8 +70838,7 @@
       "Fields": {
         "Name": "AWVシステムから充電ソケットの取り外す",
         "フローID": "EF1-3",
-        "シナリオ": "ユーザー(:リーダー)設備担当者は、AWVシステムから充電ソケットの取り外す",
-        "分岐": ""
+        "シナリオ": "ユーザー(:リーダー)設備担当者は、AWVシステムから充電ソケットの取り外す"
       }
     },
     {
@@ -70938,7 +71009,6 @@
         "Name": "ユーザー(:リーダー)設備担当者にAWVの起動を通知する",
         "フローID": "MF2",
         "シナリオ": "AWVシステムは、ユーザー(:リーダー)設備担当者にAWVの起動を通知する",
-        "分岐": "EF4",
         "備考": "・初期診断を実行する"
       }
     },
@@ -71184,8 +71254,7 @@
       "Fields": {
         "Name": "終了する",
         "フローID": "EF1-6",
-        "シナリオ": "本ユースケースを終了する",
-        "分岐": "EF3"
+        "シナリオ": "本ユースケースを終了する"
       }
     },
     {
@@ -71197,8 +71266,7 @@
       "Fields": {
         "Name": "ユーザー(:リーダー)運行担当者にAWVの起動を通知する",
         "フローID": "MF3",
-        "シナリオ": "AWVシステムは、ユーザー(:リーダー)運行担当者にAWVの起動を通知する",
-        "分岐": ""
+        "シナリオ": "AWVシステムは、ユーザー(:リーダー)運行担当者にAWVの起動を通知する"
       }
     },
     {
@@ -71210,8 +71278,7 @@
       "Fields": {
         "Name": "ユーザー(:リーダー)運行担当者にAWVの充電完了を通知する",
         "フローID": "MF7",
-        "シナリオ": "AWVシステムは、ユーザー(:リーダー)運行担当者にAWVの充電完了を通知する",
-        "分岐": "AF3"
+        "シナリオ": "AWVシステムは、ユーザー(:リーダー)運行担当者にAWVの充電完了を通知する"
       }
     },
     {
@@ -71281,8 +71348,7 @@
       "Fields": {
         "Name": "ユーザー(:リーダー)設備担当者にAWVの充電完了を通知する",
         "フローID": "MF6",
-        "シナリオ": "AWVシステムは、ユーザー(:リーダー)設備担当者にAWVの充電完了を通知する",
-        "分岐": "AF2"
+        "シナリオ": "AWVシステムは、ユーザー(:リーダー)設備担当者にAWVの充電完了を通知する"
       }
     },
     {
@@ -71431,8 +71497,7 @@
       "Fields": {
         "Name": "ユーザー(:リーダー)運行担当者にAWVの充電異常を通知する\n",
         "フローID": "EF1-2",
-        "シナリオ": "AWVシステムは、ユーザー(:リーダー)運行担当者にAWVの充電異常を通知する\n",
-        "分岐": "EF2"
+        "シナリオ": "AWVシステムは、ユーザー(:リーダー)運行担当者にAWVの充電異常を通知する\n"
       }
     },
     {
