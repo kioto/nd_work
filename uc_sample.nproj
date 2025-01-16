@@ -10617,6 +10617,19 @@
                     "ValueTypeKind": "Class",
                     "ValueTypeId": "6905cea9-caab-4594-86af-bf4ec050e8bc",
                     "DisplayName": "親ユースケース"
+                  },
+                  {
+                    "Id": "2335b0db-f221-4806-aa03-4f0d613be6c7",
+                    "FieldType": "Reference",
+                    "Name": "Step",
+                    "Unique": true,
+                    "LowerBound": 0,
+                    "UpperBound": -1,
+                    "RelationshipClassId": "132d7811-4287-4a8c-a89a-243d07330c22",
+                    "ValueTypeName": "UMLSysML.UML.Behaviors.Usecases.Step",
+                    "ValueTypeKind": "Class",
+                    "ValueTypeId": "a5b906ee-1344-46df-858d-cb1c611b378e",
+                    "DisplayName": "_ステップ"
                   }
                 ]
               },
@@ -10640,7 +10653,7 @@
                   },
                   {
                     "Name": "System.ShowInModelNavigator",
-                    "Value": "False"
+                    "Value": "True"
                   }
                 ],
                 "Extends": [
@@ -10678,7 +10691,7 @@
                     "UpperBound": 1,
                     "ValueTypeName": "String",
                     "ValueTypeKind": "Primitive",
-                    "DisplayName": "分岐"
+                    "DisplayName": "分岐先フロー"
                   },
                   {
                     "Id": "a379c8c4-89cc-48c3-9869-6bc55c10b6b5",
@@ -10703,6 +10716,19 @@
                     "ValueTypeKind": "Class",
                     "ValueTypeId": "c2dd134e-bb0c-4cdb-8b98-e5dc589bf031",
                     "DisplayName": "親シナリオ"
+                  },
+                  {
+                    "Id": "f8cf08ee-fcfb-40bb-98fa-37ce111cc337",
+                    "FieldType": "Reference",
+                    "Name": "branches",
+                    "Unique": true,
+                    "LowerBound": 0,
+                    "UpperBound": -1,
+                    "RelationshipClassId": "132d7811-4287-4a8c-a89a-243d07330c22",
+                    "ValueTypeName": "UMLSysML.UML.Behaviors.Usecases.フロー",
+                    "ValueTypeKind": "Class",
+                    "ValueTypeId": "c2dd134e-bb0c-4cdb-8b98-e5dc589bf031",
+                    "DisplayName": "分岐"
                   }
                 ]
               },
@@ -10972,6 +10998,70 @@
                     ]
                   }
                 ]
+              },
+              {
+                "Id": "132d7811-4287-4a8c-a89a-243d07330c22",
+                "TypeKind": "RefRelationship",
+                "Name": "refrelationship_Step_to_フロー",
+                "IsOneway": true,
+                "DisplayName": "ステップからフローへの参照",
+                "Fields": [
+                  {
+                    "Id": "86344df3-f0f3-4aa7-90d6-55a9eced4746",
+                    "FieldType": "Property",
+                    "Name": "Name",
+                    "Override": true,
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "名前",
+                    "Tags": [
+                      {
+                        "Name": "System.Name",
+                        "Value": "true"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "ddc97c89-bade-4891-8b20-e1828e28ef27",
+                    "FieldType": "Property",
+                    "Name": "Description",
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "説明",
+                    "Tags": [
+                      {
+                        "Name": "System.Description",
+                        "Value": "true"
+                      }
+                    ]
+                  }
+                ],
+                "Target": {
+                  "Id": "2335b0db-f221-4806-aa03-4f0d613be6c7",
+                  "RoleType": "RoleFrom",
+                  "Name": "Step",
+                  "LowerBound": 0,
+                  "UpperBound": -1,
+                  "ValueTypeName": "UMLSysML.UML.Behaviors.Usecases.Step",
+                  "ValueTypeKind": "Class",
+                  "ValueTypeId": "a5b906ee-1344-46df-858d-cb1c611b378e"
+                },
+                "Source": {
+                  "Id": "f8cf08ee-fcfb-40bb-98fa-37ce111cc337",
+                  "RoleType": "RoleTo",
+                  "Name": "branches",
+                  "LowerBound": 0,
+                  "UpperBound": -1,
+                  "ValueTypeName": "UMLSysML.UML.Behaviors.Usecases.フロー",
+                  "ValueTypeKind": "Class",
+                  "ValueTypeId": "c2dd134e-bb0c-4cdb-8b98-e5dc589bf031"
+                }
               }
             ]
           },
@@ -49097,6 +49187,44 @@
                 "ShowTitle": true,
                 "ShowTitleIcon": false,
                 "ShowGridLine": false
+              },
+              {
+                "ControlType": "Grid",
+                "Id": "dd888b84-6225-404f-8cfb-e2f776ae137d",
+                "DisplayName": "フロー",
+                "Name": "フロー",
+                "ShowIcon": false,
+                "IsReadOnly": false,
+                "Path": "branches",
+                "IsReference": false,
+                "HasPathMultipleSteps": false,
+                "ShowTitle": true,
+                "ShowTitleIcon": false,
+                "ShowGridLine": false,
+                "BulletType": "Number",
+                "RowHeight": "Auto",
+                "Columns": [
+                  {
+                    "ControlType": "GridColumn",
+                    "Id": "7914e6db-9412-4b47-97b7-e50dacb5834e",
+                    "DisplayName": "名前",
+                    "Name": "Name",
+                    "MetamodelId": "c2dd134e-bb0c-4cdb-8b98-e5dc589bf031",
+                    "ShowIcon": false,
+                    "IsReadOnly": false,
+                    "Path": "Name",
+                    "IsReference": false,
+                    "HasPathMultipleSteps": false,
+                    "ShowTitle": true,
+                    "ShowTitleIcon": false,
+                    "ShowGridLine": false,
+                    "Width": 100,
+                    "MinWidth": 40,
+                    "Order": 0,
+                    "ColumnControlId": "8f4a3545-c216-42ff-ac8d-3521b6809fdc",
+                    "ColumnControlType": "Text"
+                  }
+                ]
               }
             ]
           },
@@ -68156,11 +68284,11 @@
         },
         {
           "Id": "33bd0337-056a-4e1f-9b27-890ee2efb1f6",
-          "LocationX": 834.5,
-          "LocationY": 737,
+          "LocationX": 849,
+          "LocationY": 696,
           "ZOrder": 6,
           "Width": 120,
-          "Height": 108,
+          "Height": 152,
           "NodeType": "Entity",
           "MetamodelId": "a5b906ee-1344-46df-858d-cb1c611b378e",
           "ForeColor": "#FFFFFF",
@@ -69843,11 +69971,11 @@
     {
       "Id": "09af16c8-f538-4df7-8658-60823deb5189",
       "EntityType": "Entity",
-      "Name": "ステップ",
+      "Name": "AWVシステムは、ユーザー(:リーダー)運行担当者にAWVのOFFLINEを通知する",
       "MetamodelId": "a5b906ee-1344-46df-858d-cb1c611b378e",
       "Metamodel": "ステップ",
       "Fields": {
-        "Name": "ステップ",
+        "Name": "AWVシステムは、ユーザー(:リーダー)運行担当者にAWVのOFFLINEを通知する",
         "フローID": "EF3-2",
         "シナリオ": "AWVシステムは、ユーザー(:リーダー)運行担当者にAWVのOFFLINEを通知する"
       }
@@ -70287,11 +70415,11 @@
     {
       "Id": "46edd2ec-6b65-45f2-8d5f-b8739758049f",
       "EntityType": "Entity",
-      "Name": "ステップ",
+      "Name": "本ユースケースを終了する",
       "MetamodelId": "a5b906ee-1344-46df-858d-cb1c611b378e",
       "Metamodel": "ステップ",
       "Fields": {
-        "Name": "ステップ",
+        "Name": "本ユースケースを終了する",
         "フローID": "EF4-3",
         "シナリオ": "本ユースケースを終了する"
       }
@@ -70363,11 +70491,11 @@
     {
       "Id": "5bbb1d1e-5085-49db-99b7-581bd68b5189",
       "EntityType": "Entity",
-      "Name": "ステップ",
+      "Name": "AWVシステムは、ユーザー(:リーダー)設備担当者にAWVの異常状態を通知するップ",
       "MetamodelId": "a5b906ee-1344-46df-858d-cb1c611b378e",
       "Metamodel": "ステップ",
       "Fields": {
-        "Name": "ステップ",
+        "Name": "AWVシステムは、ユーザー(:リーダー)設備担当者にAWVの異常状態を通知するップ",
         "フローID": "EF4-1",
         "シナリオ": "AWVシステムは、ユーザー(:リーダー)設備担当者にAWVの異常状態を通知する",
         "備考": ""
@@ -70412,11 +70540,11 @@
     {
       "Id": "658bd8fc-d95c-43b9-90b0-44ba65560b95",
       "EntityType": "Entity",
-      "Name": "ステップ",
+      "Name": "EF1-6に戻る",
       "MetamodelId": "a5b906ee-1344-46df-858d-cb1c611b378e",
       "Metamodel": "ステップ",
       "Fields": {
-        "Name": "ステップ",
+        "Name": "EF1-6に戻る",
         "フローID": "EF3-3",
         "シナリオ": "EF1-6に戻る"
       }
@@ -70690,11 +70818,11 @@
     {
       "Id": "8d15a97f-89db-4ae7-86cd-de407a0caf3a",
       "EntityType": "Entity",
-      "Name": "ステップ",
+      "Name": "AWVシステムは、ユーザー(:リーダー)運行担当者にAWVの状態異常を通知する",
       "MetamodelId": "a5b906ee-1344-46df-858d-cb1c611b378e",
       "Metamodel": "ステップ",
       "Fields": {
-        "Name": "ステップ",
+        "Name": "AWVシステムは、ユーザー(:リーダー)運行担当者にAWVの状態異常を通知する",
         "フローID": "EF4-2",
         "シナリオ": "AWVシステムは、ユーザー(:リーダー)運行担当者にAWVの状態異常を通知する"
       }
@@ -70949,11 +71077,11 @@
     {
       "Id": "b55e2bfd-4461-44c3-b1ea-6ae1d846b548",
       "EntityType": "Entity",
-      "Name": "ステップ",
+      "Name": "AWVシステムは、ユーザー(:リーダー)設備担当者にAWVの通信不可を通知する",
       "MetamodelId": "a5b906ee-1344-46df-858d-cb1c611b378e",
       "Metamodel": "ステップ",
       "Fields": {
-        "Name": "ステップ",
+        "Name": "AWVシステムは、ユーザー(:リーダー)設備担当者にAWVの通信不可を通知する",
         "フローID": "EF3-1",
         "シナリオ": "AWVシステムは、ユーザー(:リーダー)設備担当者にAWVの通信不可を通知する",
         "備考": "・通信が復旧した場合、通信可能を通知する"
@@ -71399,6 +71527,15 @@
       "Metamodel": "フロー",
       "SourceId": "b4a1bcc8-9b4b-4ef9-a6b8-51ea516128e7",
       "TargetId": "df57d700-b185-4590-bbc3-6a52e25085d4",
+      "TargetIndex": -1
+    },
+    {
+      "Id": "0665bd68-d54f-4070-b4dd-a68e6d11f0a5",
+      "RelationType": "Ref",
+      "MetamodelId": "132d7811-4287-4a8c-a89a-243d07330c22",
+      "Metamodel": "ステップからフローへの参照",
+      "SourceId": "1741f800-18a2-40d9-bda5-3f2b899fc9dd",
+      "TargetId": "a73bd930-d0b4-404c-8dd5-3887c0cd572f",
       "TargetIndex": -1
     },
     {
@@ -72174,6 +72311,15 @@
       "IsDerivation": true
     },
     {
+      "Id": "69188393-dc32-4ca4-a94d-d9782056302d",
+      "RelationType": "Ref",
+      "MetamodelId": "132d7811-4287-4a8c-a89a-243d07330c22",
+      "Metamodel": "ステップからフローへの参照",
+      "SourceId": "d7df0206-eeee-4591-9214-9fa69a2d32a5",
+      "TargetId": "30bfd016-6e7d-4bee-9f26-cc04c8eb6c95",
+      "TargetIndex": -1
+    },
+    {
       "Id": "6a02dd45-d66e-414c-93aa-056f800a30ea",
       "RelationType": "Ref",
       "MetamodelId": "32fd7666-0885-4583-8d1a-dbeeb93f8250",
@@ -72460,6 +72606,15 @@
       "SourceId": "a73bd930-d0b4-404c-8dd5-3887c0cd572f",
       "TargetId": "8bd39c54-0d0d-49ae-a1a1-5699a4218cf9",
       "SourceIndex": 1,
+      "TargetIndex": -1
+    },
+    {
+      "Id": "8d53c01a-4fd8-4039-a87a-ad2ea20df96a",
+      "RelationType": "Ref",
+      "MetamodelId": "132d7811-4287-4a8c-a89a-243d07330c22",
+      "Metamodel": "ステップからフローへの参照",
+      "SourceId": "9a4c5708-889e-4f3f-af3f-6d8d3fd9d180",
+      "TargetId": "964ba8ea-f92f-4af4-8738-375ffa982c8b",
       "TargetIndex": -1
     },
     {
@@ -72897,6 +73052,15 @@
       "TargetIndex": -1
     },
     {
+      "Id": "c02f9828-7639-443e-96e2-9648243907e0",
+      "RelationType": "Ref",
+      "MetamodelId": "132d7811-4287-4a8c-a89a-243d07330c22",
+      "Metamodel": "ステップからフローへの参照",
+      "SourceId": "cca3459e-8c47-4210-acea-17ca8f5b46bc",
+      "TargetId": "aee902ee-1d3b-470d-9742-b9dc8bd21f3d",
+      "TargetIndex": -1
+    },
+    {
       "Id": "c0931820-22d5-49a3-ae7d-e233920ae9ea",
       "RelationType": "Ref",
       "MetamodelId": "2db02f06-6b12-44f9-9f78-6e01d83f70c6",
@@ -73194,6 +73358,15 @@
       "TargetIndex": -1
     },
     {
+      "Id": "e3568f2a-4024-4e96-90ce-23a3d0ea7886",
+      "RelationType": "Ref",
+      "MetamodelId": "132d7811-4287-4a8c-a89a-243d07330c22",
+      "Metamodel": "ステップからフローへの参照",
+      "SourceId": "72d48e9c-32b8-40af-b54a-ddf16c32d078",
+      "TargetId": "610c8c82-ed86-4e84-a524-7e099c72b992",
+      "TargetIndex": -1
+    },
+    {
       "Id": "e3e22b97-59d9-452c-885b-5d7bad7bcb27",
       "RelationType": "Ref",
       "MetamodelId": "742f1da8-2079-4a90-809c-e3ef2eb599ba",
@@ -73380,12 +73553,30 @@
       "TargetIndex": -1
     },
     {
+      "Id": "f53affa1-0a43-4cb7-96f5-cffabb3aff89",
+      "RelationType": "Ref",
+      "MetamodelId": "132d7811-4287-4a8c-a89a-243d07330c22",
+      "Metamodel": "ステップからフローへの参照",
+      "SourceId": "f5ca34fa-880b-49c9-966c-4fe5c0a8a5a2",
+      "TargetId": "d7607417-e824-48f0-8c3a-be683e722b6f",
+      "TargetIndex": -1
+    },
+    {
       "Id": "f72b9aaf-ffa1-41e0-b030-b16d3595ec10",
       "RelationType": "Ref",
       "MetamodelId": "742f1da8-2079-4a90-809c-e3ef2eb599ba",
       "Metamodel": "フロー",
       "SourceId": "8235be01-64f6-4253-b781-442b8e1a57c6",
       "TargetId": "99a40eaf-434e-435d-8900-c6da5266d3cf",
+      "TargetIndex": -1
+    },
+    {
+      "Id": "f87e1018-df6e-462a-9613-af6cc8b2e2d0",
+      "RelationType": "Ref",
+      "MetamodelId": "132d7811-4287-4a8c-a89a-243d07330c22",
+      "Metamodel": "ステップからフローへの参照",
+      "SourceId": "679045d1-3854-4706-bb00-963aa89d2871",
+      "TargetId": "06b83087-bbac-4336-9fad-ea4c0effe0df",
       "TargetIndex": -1
     },
     {
