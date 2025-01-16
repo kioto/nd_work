@@ -10709,7 +10709,7 @@
                   {
                     "Id": "f8cf08ee-fcfb-40bb-98fa-37ce111cc337",
                     "FieldType": "Reference",
-                    "Name": "branches",
+                    "Name": "Branches",
                     "Unique": true,
                     "LowerBound": 0,
                     "UpperBound": -1,
@@ -11061,7 +11061,7 @@
                 "Source": {
                   "Id": "f8cf08ee-fcfb-40bb-98fa-37ce111cc337",
                   "RoleType": "RoleTo",
-                  "Name": "branches",
+                  "Name": "Branches",
                   "LowerBound": 0,
                   "UpperBound": -1,
                   "ValueTypeName": "UMLSysML.UML.Behaviors.Usecases.フロー",
@@ -49211,7 +49211,7 @@
                 "Name": "フロー",
                 "ShowIcon": false,
                 "IsReadOnly": false,
-                "Path": "branches",
+                "Path": "Branches",
                 "IsReference": false,
                 "HasPathMultipleSteps": false,
                 "ShowTitle": true,
