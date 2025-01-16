@@ -10871,6 +10871,67 @@
                 ]
               },
               {
+                "Id": "88613085-b7de-413b-bd9b-50d235d1fd32",
+                "TypeKind": "Class",
+                "Name": "エンティティ_1",
+                "DisplayName": "エンティティ_1",
+                "Tags": [
+                  {
+                    "Name": "System.ShowInModelNavigator",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.ShowInTracePage",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.IsUnitizable",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.Type",
+                    "Value": "Entity"
+                  }
+                ],
+                "Fields": [
+                  {
+                    "Id": "71695383-03ab-4827-bd2c-ac61ee4d9ddd",
+                    "FieldType": "Property",
+                    "Name": "Name",
+                    "Override": true,
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "名前",
+                    "Tags": [
+                      {
+                        "Name": "System.Name",
+                        "Value": "true"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "08196407-2f6a-4c76-86d4-3321f80b932f",
+                    "FieldType": "Property",
+                    "Name": "Description",
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "説明",
+                    "Tags": [
+                      {
+                        "Name": "System.Description",
+                        "Value": "true"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
                 "Id": "d53f8941-2132-48aa-9988-f1aa2860c542",
                 "TypeKind": "RefRelationship",
                 "Name": "ActorRelation",
@@ -10945,50 +11006,6 @@
                 }
               },
               {
-                "TypeKind": "Enum",
-                "Name": "フロー区分",
-                "Id": "50d21086-bc44-409c-b435-1968b198bca3",
-                "DisplayName": "フロー区分",
-                "Literals": [
-                  {
-                    "Name": "基本フロー",
-                    "Id": "0997b354-bcfc-4824-8401-b69a5845561c",
-                    "Value": 0,
-                    "DisplayName": "基本フロー",
-                    "Tags": [
-                      {
-                        "Name": "System.Icon",
-                        "Value": "embed://document/document3"
-                      }
-                    ]
-                  },
-                  {
-                    "Name": "代替フロー",
-                    "Id": "88453d64-7062-4dbd-b79f-05336e63b206",
-                    "Value": 1,
-                    "DisplayName": "代替フロー",
-                    "Tags": [
-                      {
-                        "Name": "System.Icon",
-                        "Value": "embed://document/document5"
-                      }
-                    ]
-                  },
-                  {
-                    "Name": "例外フロー",
-                    "Id": "adc9ee4c-77cf-492c-aeb7-189fcd05fa2f",
-                    "Value": 2,
-                    "DisplayName": "例外フロー",
-                    "Tags": [
-                      {
-                        "Name": "System.Icon",
-                        "Value": "embed://document/document5"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
                 "Id": "132d7811-4287-4a8c-a89a-243d07330c22",
                 "TypeKind": "RefRelationship",
                 "Name": "refrelationship_Step_to_フロー",
@@ -11053,61 +11070,44 @@
                 }
               },
               {
-                "Id": "88613085-b7de-413b-bd9b-50d235d1fd32",
-                "TypeKind": "Class",
-                "Name": "エンティティ_1",
-                "DisplayName": "エンティティ_1",
-                "Tags": [
+                "TypeKind": "Enum",
+                "Name": "フロー区分",
+                "Id": "50d21086-bc44-409c-b435-1968b198bca3",
+                "DisplayName": "フロー区分",
+                "Literals": [
                   {
-                    "Name": "System.ShowInModelNavigator",
-                    "Value": "True"
-                  },
-                  {
-                    "Name": "System.ShowInTracePage",
-                    "Value": "True"
-                  },
-                  {
-                    "Name": "System.IsUnitizable",
-                    "Value": "True"
-                  },
-                  {
-                    "Name": "System.Type",
-                    "Value": "Entity"
-                  }
-                ],
-                "Fields": [
-                  {
-                    "Id": "71695383-03ab-4827-bd2c-ac61ee4d9ddd",
-                    "FieldType": "Property",
-                    "Name": "Name",
-                    "Override": true,
-                    "Unique": true,
-                    "LowerBound": 1,
-                    "UpperBound": 1,
-                    "ValueTypeName": "String",
-                    "ValueTypeKind": "Primitive",
-                    "DisplayName": "名前",
+                    "Name": "基本フロー",
+                    "Id": "0997b354-bcfc-4824-8401-b69a5845561c",
+                    "Value": 0,
+                    "DisplayName": "基本フロー",
                     "Tags": [
                       {
-                        "Name": "System.Name",
-                        "Value": "true"
+                        "Name": "System.Icon",
+                        "Value": "embed://document/document3"
                       }
                     ]
                   },
                   {
-                    "Id": "08196407-2f6a-4c76-86d4-3321f80b932f",
-                    "FieldType": "Property",
-                    "Name": "Description",
-                    "Unique": true,
-                    "LowerBound": 1,
-                    "UpperBound": 1,
-                    "ValueTypeName": "String",
-                    "ValueTypeKind": "Primitive",
-                    "DisplayName": "説明",
+                    "Name": "代替フロー",
+                    "Id": "88453d64-7062-4dbd-b79f-05336e63b206",
+                    "Value": 1,
+                    "DisplayName": "代替フロー",
                     "Tags": [
                       {
-                        "Name": "System.Description",
-                        "Value": "true"
+                        "Name": "System.Icon",
+                        "Value": "embed://document/document5"
+                      }
+                    ]
+                  },
+                  {
+                    "Name": "例外フロー",
+                    "Id": "adc9ee4c-77cf-492c-aeb7-189fcd05fa2f",
+                    "Value": 2,
+                    "DisplayName": "例外フロー",
+                    "Tags": [
+                      {
+                        "Name": "System.Icon",
+                        "Value": "embed://document/document5"
                       }
                     ]
                   }
@@ -68270,11 +68270,11 @@
       "Nodes": [
         {
           "Id": "5c6c0e71-8be7-4812-9fda-e84f75ec3f92",
-          "LocationX": 540.5,
-          "LocationY": 444.5,
+          "LocationX": 517.5,
+          "LocationY": 440.75,
           "ZOrder": 0,
-          "Width": 166,
-          "Height": 152,
+          "Width": 135,
+          "Height": 111.5,
           "NodeType": "Entity",
           "MetamodelId": "6905cea9-caab-4594-86af-bf4ec050e8bc",
           "ForeColor": "#FFFFFF",
@@ -68283,11 +68283,11 @@
         },
         {
           "Id": "28294f1c-d026-462e-ba46-7b7c38d886f2",
-          "LocationX": 192.5,
-          "LocationY": 419,
+          "LocationX": 197.5,
+          "LocationY": 460,
           "ZOrder": 1,
           "Width": 166,
-          "Height": 134.5,
+          "Height": 73,
           "NodeType": "Entity",
           "MetamodelId": "d796e68e-43f1-4ced-9468-acf1b0e58c23",
           "ForeColor": "#FFFFFF",
@@ -68296,10 +68296,10 @@
         },
         {
           "Id": "28e3587d-e7d0-4f70-af48-c6182cd46827",
-          "LocationX": 348,
-          "LocationY": 608,
+          "LocationX": 348.5,
+          "LocationY": 567.5,
           "ZOrder": 2,
-          "Width": 120,
+          "Width": 127.5,
           "Height": 29,
           "NodeType": "Entity",
           "MetamodelId": "e6b64f35-33f6-4684-94eb-73f20e82a552",
@@ -68309,11 +68309,11 @@
         },
         {
           "Id": "cf4c5527-5675-4cab-a8b4-519804fcac06",
-          "LocationX": 204,
-          "LocationY": 142.25,
+          "LocationX": 204.25,
+          "LocationY": 320.5,
           "ZOrder": 3,
-          "Width": 166,
-          "Height": 94.5,
+          "Width": 152.5,
+          "Height": 55.5,
           "NodeType": "Entity",
           "MetamodelId": "3ff19091-b74e-4603-8e11-d345d2c0216d",
           "ForeColor": "#FFFFFF",
@@ -68322,8 +68322,8 @@
         },
         {
           "Id": "4c0fe3e0-a275-47cb-8454-b666fa31bd9e",
-          "LocationX": 130,
-          "LocationY": 31,
+          "LocationX": 128.5,
+          "LocationY": 256.5,
           "ZOrder": 4,
           "Width": 120,
           "Height": 29,
@@ -68335,11 +68335,11 @@
         },
         {
           "Id": "b4c3fb36-af23-406d-b71b-6515974190f4",
-          "LocationX": 610.5,
-          "LocationY": 701,
+          "LocationX": 584,
+          "LocationY": 629.5,
           "ZOrder": 5,
-          "Width": 150,
-          "Height": 152,
+          "Width": 147.5,
+          "Height": 141.5,
           "NodeType": "Entity",
           "MetamodelId": "c2dd134e-bb0c-4cdb-8b98-e5dc589bf031",
           "ForeColor": "#FFFFFF",
@@ -68348,11 +68348,11 @@
         },
         {
           "Id": "33bd0337-056a-4e1f-9b27-890ee2efb1f6",
-          "LocationX": 849,
-          "LocationY": 696,
+          "LocationX": 772.5,
+          "LocationY": 624.5,
           "ZOrder": 6,
-          "Width": 120,
-          "Height": 152,
+          "Width": 119.25,
+          "Height": 111.5,
           "NodeType": "Entity",
           "MetamodelId": "a5b906ee-1344-46df-858d-cb1c611b378e",
           "ForeColor": "#FFFFFF",
@@ -68361,8 +68361,8 @@
         },
         {
           "Id": "9a45ad8a-120f-4b51-bdf6-6c41c58c9875",
-          "LocationX": 982.5,
-          "LocationY": 419,
+          "LocationX": 728.5,
+          "LocationY": 338.5,
           "ZOrder": 7,
           "Width": 135,
           "Height": 29,
@@ -68374,7 +68374,7 @@
         },
         {
           "Id": "a6084677-fbf2-4db8-b82b-c7a1bb24a651",
-          "LocationX": 788.5,
+          "LocationX": 700.5,
           "LocationY": 393.5,
           "ZOrder": 8,
           "Width": 120,
@@ -68387,8 +68387,8 @@
         },
         {
           "Id": "bda7c940-5c09-4d97-a269-dc637c3d1e3f",
-          "LocationX": 834.5,
-          "LocationY": 916.5,
+          "LocationX": 771.75,
+          "LocationY": 814,
           "ZOrder": 9,
           "Width": 120,
           "Height": 29,
@@ -68400,8 +68400,8 @@
         },
         {
           "Id": "adf3b282-404c-420f-b739-3859195689b8",
-          "LocationX": 610.5,
-          "LocationY": 916.5,
+          "LocationX": 597.75,
+          "LocationY": 814,
           "ZOrder": 10,
           "Width": 120,
           "Height": 29,
@@ -68413,8 +68413,8 @@
         },
         {
           "Id": "f1f7b393-13e1-4efd-8246-c2ddb5ac68bb",
-          "LocationX": 452.5,
-          "LocationY": 952.5,
+          "LocationX": 424,
+          "LocationY": 752.5,
           "ZOrder": 11,
           "Width": 120,
           "Height": 90.5,
@@ -68426,11 +68426,11 @@
         },
         {
           "Id": "72075f0e-f67f-468a-98bc-43e881c326e2",
-          "LocationX": 285.5,
-          "LocationY": 842.5,
+          "LocationX": 286.5,
+          "LocationY": 704.5,
           "ZOrder": 12,
           "Width": 120,
-          "Height": 80,
+          "Height": 66.5,
           "NodeType": "Entity",
           "MetamodelId": "1d181800-f8d1-40ad-bcde-bf2075b01592",
           "ForeColor": "#FFFFFF",
@@ -68439,8 +68439,8 @@
         },
         {
           "Id": "6d768adb-3e86-4e4a-b45e-fe234e082918",
-          "LocationX": 77,
-          "LocationY": 788,
+          "LocationX": 121,
+          "LocationY": 680,
           "ZOrder": 13,
           "Width": 135,
           "Height": 29,
@@ -68452,11 +68452,11 @@
         },
         {
           "Id": "bc78da8f-0988-4ed3-9dd1-b39eaedd01db",
-          "LocationX": 285.5,
-          "LocationY": 696,
+          "LocationX": 286.5,
+          "LocationY": 624.5,
           "ZOrder": 14,
           "Width": 120,
-          "Height": 80,
+          "Height": 55.5,
           "NodeType": "Entity",
           "MetamodelId": "f3f06df5-40f2-4a8b-8e93-bdc73ac57bc5",
           "ForeColor": "#FFFFFF",
@@ -68465,8 +68465,8 @@
         },
         {
           "Id": "50e136d8-dc40-4fc7-afbb-b22072f600a6",
-          "LocationX": 540.5,
-          "LocationY": 31,
+          "LocationX": 539,
+          "LocationY": 256.5,
           "ZOrder": 15,
           "Width": 120,
           "Height": 29,
@@ -68478,8 +68478,8 @@
         },
         {
           "Id": "655f0ee7-b010-4c82-b139-4638ee85b1cf",
-          "LocationX": 517.5,
-          "LocationY": 149.5,
+          "LocationX": 502,
+          "LocationY": 320.5,
           "ZOrder": 16,
           "Width": 166,
           "Height": 80,
@@ -68491,8 +68491,8 @@
         },
         {
           "Id": "619be6cf-5506-49ba-81b9-13439afdd3d7",
-          "LocationX": 834.5,
-          "LocationY": 175,
+          "LocationX": 728.5,
+          "LocationY": 273.5,
           "ZOrder": 17,
           "Width": 120,
           "Height": 29,
@@ -68504,8 +68504,8 @@
         },
         {
           "Id": "c7affe25-b717-4d68-8499-b8abba8de627",
-          "LocationX": 296,
-          "LocationY": 32,
+          "LocationX": 294.5,
+          "LocationY": 257.5,
           "ZOrder": 18,
           "Width": 194,
           "Height": 27,
@@ -68513,19 +68513,6 @@
           "MetamodelId": "e0cd31ec-0c61-4baa-acc2-1fe5a66247a4",
           "ForeColor": "#FFFFFF",
           "BackColor": "#FF7030A0",
-          "BorderColor": "#000000"
-        },
-        {
-          "Id": "8836a792-915a-4c89-a5a7-7e8c1a00eccc",
-          "LocationX": 641.5,
-          "LocationY": 346.4,
-          "ZOrder": 19,
-          "Width": 120,
-          "Height": 80,
-          "NodeType": "Entity",
-          "MetamodelId": "88613085-b7de-413b-bd9b-50d235d1fd32",
-          "ForeColor": "#FFFFFF",
-          "BackColor": "#498ABC",
           "BorderColor": "#000000"
         }
       ],
@@ -68590,7 +68577,7 @@
           "TargetId": "a6084677-fbf2-4db8-b82b-c7a1bb24a651",
           "Bends": [
             {
-              "LocationX": 749.5,
+              "LocationX": 680,
               "LocationY": 433.5
             }
           ],
@@ -68605,8 +68592,8 @@
           "TargetId": "a6084677-fbf2-4db8-b82b-c7a1bb24a651",
           "Bends": [
             {
-              "LocationX": 760.5,
-              "LocationY": 502.5
+              "LocationX": 691.5,
+              "LocationY": 505.25
             }
           ],
           "LineType": "Straight",
