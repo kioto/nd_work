@@ -10379,21 +10379,64 @@
                 ],
                 "Fields": [
                   {
-                    "Id": "c8552bf3-fba7-4f48-8cf3-fafee87f51ab",
+                    "Id": "7da22062-03c9-40d9-a503-05e0f2361726",
                     "FieldType": "Property",
-                    "Name": "Scenarios",
+                    "Name": "RelatedRequirementId",
                     "Unique": true,
-                    "LowerBound": 0,
-                    "UpperBound": -1,
-                    "RelationshipClassId": "6cf13842-1a16-49e1-b85e-0f7011a58359",
-                    "ValueTypeName": "UMLSysML.UML.Behaviors.Usecases.フロー",
-                    "ValueTypeKind": "Class",
-                    "ValueTypeId": "c2dd134e-bb0c-4cdb-8b98-e5dc589bf031",
-                    "DisplayName": "フロー",
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "関連要求ID",
                     "Tags": [
                       {
                         "Name": "System.Category",
-                        "Value": "シナリオ"
+                        "Value": "条件"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "ca27774e-dbb1-4141-bbf1-edc9367d8eb4",
+                    "FieldType": "Property",
+                    "Name": "Abstract",
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "概要、場面"
+                  },
+                  {
+                    "Id": "9b34ff05-153a-4d2c-8b07-a5808f689388",
+                    "FieldType": "Property",
+                    "Name": "StakeholderRequirement",
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "ステークホルダー要求",
+                    "Tags": [
+                      {
+                        "Name": "System.Category",
+                        "Value": "関連"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "45eb6c92-56d0-4084-b299-25c28164da2a",
+                    "FieldType": "Property",
+                    "Name": "RelatedRequirement",
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "関連要件（制約）",
+                    "Tags": [
+                      {
+                        "Name": "System.Category",
+                        "Value": "関連"
                       }
                     ]
                   },
@@ -10432,6 +10475,25 @@
                       {
                         "Name": "System.Category",
                         "Value": "条件"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "c8552bf3-fba7-4f48-8cf3-fafee87f51ab",
+                    "FieldType": "Property",
+                    "Name": "Scenarios",
+                    "Unique": true,
+                    "LowerBound": 0,
+                    "UpperBound": -1,
+                    "RelationshipClassId": "6cf13842-1a16-49e1-b85e-0f7011a58359",
+                    "ValueTypeName": "UMLSysML.UML.Behaviors.Usecases.フロー",
+                    "ValueTypeKind": "Class",
+                    "ValueTypeId": "c2dd134e-bb0c-4cdb-8b98-e5dc589bf031",
+                    "DisplayName": "フロー",
+                    "Tags": [
+                      {
+                        "Name": "System.Category",
+                        "Value": "シナリオ"
                       }
                     ]
                   },
@@ -33345,6 +33407,100 @@
                         "HorizontalTextAlignment": "Left"
                       }
                     }
+                  },
+                  {
+                    "ControlType": "Text",
+                    "Id": "542dfe59-bab2-4b8f-843c-98662a3a781f",
+                    "DisplayName": "関連要求ID",
+                    "Name": "RelatedRequirementId",
+                    "ShowIcon": false,
+                    "IsReadOnly": false,
+                    "Path": "RelatedRequirementId",
+                    "IsReference": false,
+                    "HasPathMultipleSteps": false,
+                    "ShowTitle": true,
+                    "ShowTitleIcon": false,
+                    "ShowGridLine": false
+                  },
+                  {
+                    "ControlType": "Text",
+                    "Id": "bca511ae-3540-4c16-bdf7-c20d91a522ae",
+                    "DisplayName": "概要、場面",
+                    "Name": "Abstract",
+                    "ShowIcon": false,
+                    "IsReadOnly": false,
+                    "Path": "Abstract",
+                    "IsReference": false,
+                    "HasPathMultipleSteps": false,
+                    "ShowTitle": true,
+                    "ShowTitleIcon": false,
+                    "ShowGridLine": false
+                  },
+                  {
+                    "ControlType": "Grid",
+                    "Id": "8be53ab7-a5de-418e-9eed-a9a3b29b760d",
+                    "DisplayName": "アクター",
+                    "Name": "Actors",
+                    "ShowIcon": false,
+                    "IsReadOnly": false,
+                    "Path": "Actors",
+                    "IsReference": false,
+                    "HasPathMultipleSteps": false,
+                    "ShowTitle": true,
+                    "ShowTitleIcon": false,
+                    "ShowGridLine": false,
+                    "BulletType": "Number",
+                    "RowHeight": "Auto",
+                    "Columns": [
+                      {
+                        "ControlType": "GridColumn",
+                        "Id": "e4b91666-f091-42d5-bef3-d6084dc71775",
+                        "DisplayName": "名前",
+                        "Name": "Name",
+                        "MetamodelId": "d796e68e-43f1-4ced-9468-acf1b0e58c23",
+                        "ShowIcon": false,
+                        "IsReadOnly": false,
+                        "Path": "Name",
+                        "IsReference": false,
+                        "HasPathMultipleSteps": false,
+                        "ShowTitle": true,
+                        "ShowTitleIcon": false,
+                        "ShowGridLine": false,
+                        "Width": 100,
+                        "MinWidth": 40,
+                        "Order": 0,
+                        "ColumnControlId": "5d67a770-5f25-43df-adb6-9ed1cd7b0e3f",
+                        "ColumnControlType": "Text"
+                      }
+                    ]
+                  },
+                  {
+                    "ControlType": "Text",
+                    "Id": "02f14400-8b6e-4ad7-b550-0c5ce7dcf19c",
+                    "DisplayName": "ステークホルダー要求",
+                    "Name": "StakeholderRequirement",
+                    "ShowIcon": false,
+                    "IsReadOnly": false,
+                    "Path": "StakeholderRequirement",
+                    "IsReference": false,
+                    "HasPathMultipleSteps": false,
+                    "ShowTitle": true,
+                    "ShowTitleIcon": false,
+                    "ShowGridLine": false
+                  },
+                  {
+                    "ControlType": "Text",
+                    "Id": "76856eda-9eb8-4093-98eb-7f2f6fb928b4",
+                    "DisplayName": "関連要求（制約）",
+                    "Name": "RelatedRequirement",
+                    "ShowIcon": false,
+                    "IsReadOnly": false,
+                    "Path": "RelatedRequirement",
+                    "IsReference": false,
+                    "HasPathMultipleSteps": false,
+                    "ShowTitle": true,
+                    "ShowTitleIcon": false,
+                    "ShowGridLine": false
                   }
                 ]
               },
@@ -33555,64 +33711,6 @@
                     "MinWidth": 40,
                     "Order": 0,
                     "ColumnControlId": "54d402c6-dd97-436b-9314-e902f64b0608",
-                    "ColumnControlType": "Text"
-                  }
-                ]
-              },
-              {
-                "ControlType": "Grid",
-                "Id": "559d42b3-60bf-4c91-b32a-55ac186c4b31",
-                "DisplayName": "アクター",
-                "Name": "Actors",
-                "ShowIcon": false,
-                "IsReadOnly": false,
-                "Path": "Actors",
-                "IsReference": false,
-                "HasPathMultipleSteps": false,
-                "ShowTitle": true,
-                "ShowTitleIcon": false,
-                "ShowGridLine": false,
-                "BulletType": "Number",
-                "RowHeight": "Auto",
-                "Columns": [
-                  {
-                    "ControlType": "GridColumn",
-                    "Id": "19e19d44-99cc-416e-9c1c-3cab2886fc38",
-                    "DisplayName": "名前",
-                    "Name": "Name",
-                    "MetamodelId": "d796e68e-43f1-4ced-9468-acf1b0e58c23",
-                    "ShowIcon": false,
-                    "IsReadOnly": false,
-                    "Path": "Name",
-                    "IsReference": false,
-                    "HasPathMultipleSteps": false,
-                    "ShowTitle": true,
-                    "ShowTitleIcon": false,
-                    "ShowGridLine": false,
-                    "Width": 227,
-                    "MinWidth": 40,
-                    "Order": 0,
-                    "ColumnControlId": "c48b4b28-8cc2-4ae9-8bb3-7245613e0a6d",
-                    "ColumnControlType": "Text"
-                  },
-                  {
-                    "ControlType": "GridColumn",
-                    "Id": "d975af1e-229f-4262-89c1-9a2af377e7dc",
-                    "DisplayName": "説明",
-                    "Name": "Description",
-                    "MetamodelId": "d796e68e-43f1-4ced-9468-acf1b0e58c23",
-                    "ShowIcon": false,
-                    "IsReadOnly": false,
-                    "Path": "Description",
-                    "IsReference": false,
-                    "HasPathMultipleSteps": false,
-                    "ShowTitle": true,
-                    "ShowTitleIcon": false,
-                    "ShowGridLine": false,
-                    "Width": 100,
-                    "MinWidth": 40,
-                    "Order": 0,
-                    "ColumnControlId": "cc36c9e8-e8f8-4da2-831a-6d4a1ccb14a5",
                     "ColumnControlType": "Text"
                   }
                 ]
@@ -68294,7 +68392,7 @@
           "LocationY": 440.75,
           "ZOrder": 0,
           "Width": 135,
-          "Height": 111.5,
+          "Height": 146.5,
           "NodeType": "Entity",
           "MetamodelId": "6905cea9-caab-4594-86af-bf4ec050e8bc",
           "ForeColor": "#FFFFFF",
@@ -70377,7 +70475,8 @@
         "Description": "充電する",
         "Visibility": "Public",
         "IsFinal": false,
-        "IsAbstract": false
+        "IsAbstract": false,
+        "StakeholderRequirement": "・現場監督者は、CO2排出量の少ない電動車両を使いたい   "
       }
     },
     {
