@@ -2079,6 +2079,33 @@
                   "ValueTypeKind": "Class",
                   "ValueTypeId": "f9eff814-5de9-4538-adc9-4576525d4283"
                 }
+              },
+              {
+                "Id": "616e088a-958e-4e26-a4c4-c263c82b85de",
+                "TypeKind": "EmbedRelationship",
+                "Name": "___anonymous___embedrelationship_Usecase_Issue",
+                "IsOneway": true,
+                "DisplayName": "Issueの所有",
+                "Target": {
+                  "Id": "c6f63cf0-079e-4bb4-adb4-dc4b5e15d608",
+                  "RoleType": "RoleParent",
+                  "Name": "___anonymous___owner_related_to_Usecase_Issue",
+                  "LowerBound": 0,
+                  "UpperBound": -1,
+                  "ValueTypeName": "UMLSysML.UML.Behaviors.Usecases.Usecase",
+                  "ValueTypeKind": "Class",
+                  "ValueTypeId": "6905cea9-caab-4594-86af-bf4ec050e8bc"
+                },
+                "Source": {
+                  "Id": "15ad82b9-388b-48b1-93ad-f6f3ae3d951e",
+                  "RoleType": "RoleChild",
+                  "Name": "課題、TBD事項",
+                  "LowerBound": 0,
+                  "UpperBound": -1,
+                  "ValueTypeName": "UMLSysML.UML.Behaviors.Usecases.Issue",
+                  "ValueTypeKind": "Class",
+                  "ValueTypeId": "e93584c4-8c55-43db-84b5-8159959e59ac"
+                }
               }
             ]
           },
@@ -10498,6 +10525,19 @@
                     ]
                   },
                   {
+                    "Id": "15ad82b9-388b-48b1-93ad-f6f3ae3d951e",
+                    "FieldType": "Property",
+                    "Name": "課題、TBD事項",
+                    "Unique": true,
+                    "LowerBound": 0,
+                    "UpperBound": -1,
+                    "RelationshipClassId": "616e088a-958e-4e26-a4c4-c263c82b85de",
+                    "ValueTypeName": "UMLSysML.UML.Behaviors.Usecases.Issue",
+                    "ValueTypeKind": "Class",
+                    "ValueTypeId": "e93584c4-8c55-43db-84b5-8159959e59ac",
+                    "DisplayName": "課題、TBD事項"
+                  },
+                  {
                     "Id": "b55151ba-b3aa-4f8d-b314-d3dbf1451115",
                     "FieldType": "Reference",
                     "Name": "Actors",
@@ -11172,6 +11212,80 @@
                         "Value": "embed://document/document5"
                       }
                     ]
+                  }
+                ]
+              },
+              {
+                "Id": "e93584c4-8c55-43db-84b5-8159959e59ac",
+                "TypeKind": "Class",
+                "Name": "Issue",
+                "DisplayName": "Issue",
+                "Tags": [
+                  {
+                    "Name": "System.ShowInModelNavigator",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.ShowInTracePage",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.IsUnitizable",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.Type",
+                    "Value": "Entity"
+                  }
+                ],
+                "Fields": [
+                  {
+                    "Id": "68f8abe3-fc6d-4d91-8243-3de391882255",
+                    "FieldType": "Property",
+                    "Name": "Name",
+                    "Override": true,
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "ID",
+                    "Tags": [
+                      {
+                        "Name": "System.Name",
+                        "Value": "true"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "d053e7e2-a7fa-4c5f-9745-fefd389f5970",
+                    "FieldType": "Property",
+                    "Name": "内容",
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "内容",
+                    "Tags": [
+                      {
+                        "Name": "System.Description",
+                        "Value": "true"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "c6f63cf0-079e-4bb4-adb4-dc4b5e15d608",
+                    "FieldType": "Reference",
+                    "Name": "___anonymous___owner_related_to_Usecase_Issue",
+                    "Unique": true,
+                    "LowerBound": 0,
+                    "UpperBound": -1,
+                    "RelationshipClassId": "616e088a-958e-4e26-a4c4-c263c82b85de",
+                    "ValueTypeName": "UMLSysML.UML.Behaviors.Usecases.Usecase",
+                    "ValueTypeKind": "Class",
+                    "ValueTypeId": "6905cea9-caab-4594-86af-bf4ec050e8bc",
+                    "DisplayName": "親ユースケース"
                   }
                 ]
               }
@@ -33711,6 +33825,64 @@
                     "MinWidth": 40,
                     "Order": 0,
                     "ColumnControlId": "54d402c6-dd97-436b-9314-e902f64b0608",
+                    "ColumnControlType": "Text"
+                  }
+                ]
+              },
+              {
+                "ControlType": "Grid",
+                "Id": "5aa24771-bdbc-4ded-855e-e9b4286be0ba",
+                "DisplayName": "課題、TBD事項",
+                "Name": "課題、TBD事項",
+                "ShowIcon": false,
+                "IsReadOnly": false,
+                "Path": "課題、TBD事項",
+                "IsReference": false,
+                "HasPathMultipleSteps": false,
+                "ShowTitle": true,
+                "ShowTitleIcon": false,
+                "ShowGridLine": false,
+                "BulletType": "Number",
+                "RowHeight": "Auto",
+                "Columns": [
+                  {
+                    "ControlType": "GridColumn",
+                    "Id": "e75e52ff-9f77-432c-8646-2527bf3a5378",
+                    "DisplayName": "ID",
+                    "Name": "Name",
+                    "MetamodelId": "e93584c4-8c55-43db-84b5-8159959e59ac",
+                    "ShowIcon": false,
+                    "IsReadOnly": false,
+                    "Path": "Name",
+                    "IsReference": false,
+                    "HasPathMultipleSteps": false,
+                    "ShowTitle": true,
+                    "ShowTitleIcon": false,
+                    "ShowGridLine": false,
+                    "Width": 100,
+                    "MinWidth": 40,
+                    "Order": 0,
+                    "ColumnControlId": "b8b8937d-98c9-47de-aabf-5f61c8a75e38",
+                    "ColumnControlType": "Text"
+                  },
+                  {
+                    "ControlType": "GridColumn",
+                    "Id": "56e2dece-d173-473e-ac5d-29a44303b89d",
+                    "DisplayName": "内容",
+                    "Name": "内容",
+                    "MetamodelId": "e93584c4-8c55-43db-84b5-8159959e59ac",
+                    "ShowIcon": false,
+                    "IsReadOnly": false,
+                    "Path": "内容",
+                    "IsReference": false,
+                    "HasPathMultipleSteps": false,
+                    "ShowTitle": true,
+                    "ShowTitleIcon": false,
+                    "ShowGridLine": false,
+                    "Width": 100,
+                    "MinWidth": 40,
+                    "Order": 0,
+                    "ColumnControlId": "310de0e0-756a-4a89-bc46-d11b90161e7b",
                     "ColumnControlType": "Text"
                   }
                 ]
@@ -61301,6 +61473,54 @@
             "ViewElementType": "DocumentLayout",
             "TitleWidth": 250
           }
+        },
+        {
+          "ViewType": "Form",
+          "Id": "3efdc3f5-3703-49be-bd49-22418a1f045a",
+          "DisplayName": "詳細",
+          "Name": "Detail",
+          "MetamodelId": "e93584c4-8c55-43db-84b5-8159959e59ac",
+          "ShowIcon": false,
+          "IsReadOnly": false,
+          "DisplayTarget": "Both",
+          "ShowTitle": false,
+          "OutlineNumberLevel": 0,
+          "AutoGenerated": false,
+          "FixColumnIndex": 0,
+          "RootControl": {
+            "ControlType": "EntityControl",
+            "Id": "56a1684d-4fcc-4dab-817c-7124b80db3a0",
+            "Name": "エンティティ_2",
+            "MetamodelId": "e93584c4-8c55-43db-84b5-8159959e59ac",
+            "ShowIcon": false,
+            "IsReadOnly": false,
+            "IsReference": false,
+            "HasPathMultipleSteps": false,
+            "ShowTitle": true,
+            "ShowTitleIcon": false,
+            "ShowGridLine": false,
+            "TitleBindingPath": "Name",
+            "Controls": [
+              {
+                "ControlType": "Text",
+                "Id": "753b1844-53b4-4aaf-84a4-e348cc9915ef",
+                "DisplayName": "説明",
+                "Name": "Description",
+                "ShowIcon": false,
+                "IsReadOnly": false,
+                "Path": "内容",
+                "IsReference": false,
+                "HasPathMultipleSteps": false,
+                "ShowTitle": true,
+                "ShowTitleIcon": false,
+                "ShowGridLine": false
+              }
+            ]
+          },
+          "Layout": {
+            "ViewElementType": "DocumentLayout",
+            "TitleWidth": 250
+          }
         }
       ]
     }
@@ -68389,10 +68609,10 @@
         {
           "Id": "5c6c0e71-8be7-4812-9fda-e84f75ec3f92",
           "LocationX": 517.5,
-          "LocationY": 440.75,
+          "LocationY": 432,
           "ZOrder": 0,
           "Width": 135,
-          "Height": 146.5,
+          "Height": 178.5,
           "NodeType": "Entity",
           "MetamodelId": "6905cea9-caab-4594-86af-bf4ec050e8bc",
           "ForeColor": "#FFFFFF",
@@ -68401,8 +68621,8 @@
         },
         {
           "Id": "28294f1c-d026-462e-ba46-7b7c38d886f2",
-          "LocationX": 197.5,
-          "LocationY": 460,
+          "LocationX": 190.75,
+          "LocationY": 413.5,
           "ZOrder": 1,
           "Width": 166,
           "Height": 73,
@@ -68414,8 +68634,8 @@
         },
         {
           "Id": "28e3587d-e7d0-4f70-af48-c6182cd46827",
-          "LocationX": 348.5,
-          "LocationY": 567.5,
+          "LocationX": 339,
+          "LocationY": 506,
           "ZOrder": 2,
           "Width": 127.5,
           "Height": 29,
@@ -68544,8 +68764,8 @@
         },
         {
           "Id": "72075f0e-f67f-468a-98bc-43e881c326e2",
-          "LocationX": 286.5,
-          "LocationY": 704.5,
+          "LocationX": 198,
+          "LocationY": 720.5,
           "ZOrder": 12,
           "Width": 120,
           "Height": 66.5,
@@ -68557,8 +68777,8 @@
         },
         {
           "Id": "6d768adb-3e86-4e4a-b45e-fe234e082918",
-          "LocationX": 121,
-          "LocationY": 680,
+          "LocationX": 32.5,
+          "LocationY": 696,
           "ZOrder": 13,
           "Width": 135,
           "Height": 29,
@@ -68570,8 +68790,8 @@
         },
         {
           "Id": "bc78da8f-0988-4ed3-9dd1-b39eaedd01db",
-          "LocationX": 286.5,
-          "LocationY": 624.5,
+          "LocationX": 198,
+          "LocationY": 640.5,
           "ZOrder": 14,
           "Width": 120,
           "Height": 55.5,
@@ -68631,6 +68851,19 @@
           "MetamodelId": "e0cd31ec-0c61-4baa-acc2-1fe5a66247a4",
           "ForeColor": "#FFFFFF",
           "BackColor": "#FF7030A0",
+          "BorderColor": "#000000"
+        },
+        {
+          "Id": "1bb10771-fd8d-45c6-af9d-37a8bae73ee3",
+          "LocationX": 364.5,
+          "LocationY": 571.8241666666668,
+          "ZOrder": 19,
+          "Width": 120,
+          "Height": 80,
+          "NodeType": "Entity",
+          "MetamodelId": "e93584c4-8c55-43db-84b5-8159959e59ac",
+          "ForeColor": "#FFFFFF",
+          "BackColor": "#498ABC",
           "BorderColor": "#000000"
         }
       ],
@@ -68831,6 +69064,16 @@
           "ConnectorType": "Generalization",
           "MetamodelId": "3ff19091-b74e-4603-8e11-d345d2c0216d",
           "BackColor": "#FFFFFF"
+        },
+        {
+          "Id": "86152a4f-4bc0-451b-9a1e-79436c4e62ff",
+          "SourceId": "5c6c0e71-8be7-4812-9fda-e84f75ec3f92",
+          "TargetId": "1bb10771-fd8d-45c6-af9d-37a8bae73ee3",
+          "LineType": "Straight",
+          "ConnectorType": "Embed",
+          "MetamodelId": "616e088a-958e-4e26-a4c4-c263c82b85de",
+          "BackColor": "#000000",
+          "BorderColor": "#000000"
         }
       ]
     },
@@ -70655,6 +70898,17 @@
       }
     },
     {
+      "Id": "575510ff-e741-400f-833d-9b9fb62989d5",
+      "EntityType": "Entity",
+      "Name": "TBD1",
+      "MetamodelId": "e93584c4-8c55-43db-84b5-8159959e59ac",
+      "Metamodel": "Issue",
+      "Fields": {
+        "Name": "TBD1",
+        "内容": "TBD1の内容"
+      }
+    },
+    {
       "Id": "57a4b719-cd11-4230-82c9-799d23cbc9db",
       "EntityType": "Entity",
       "Name": "AWVを終了する",
@@ -71510,6 +71764,17 @@
       }
     },
     {
+      "Id": "e04281cd-7cb6-459c-a9c2-d4ce78703f1c",
+      "EntityType": "Entity",
+      "Name": "TBD2",
+      "MetamodelId": "e93584c4-8c55-43db-84b5-8159959e59ac",
+      "Metamodel": "Issue",
+      "Fields": {
+        "Name": "TBD2",
+        "内容": "TBD2の内容"
+      }
+    },
+    {
       "Id": "e1b8dda5-a5f9-435f-b794-5fd448b89d50",
       "EntityType": "Entity",
       "Name": "ユースケース",
@@ -72295,6 +72560,16 @@
       "Metamodel": "条件の所有",
       "SourceId": "57a4b719-cd11-4230-82c9-799d23cbc9db",
       "TargetId": "21a4950c-de79-4138-b917-f02dcf82d8f6",
+      "TargetIndex": -1
+    },
+    {
+      "Id": "498b9daf-8623-46ac-a961-df050b9131a2",
+      "RelationType": "Embed",
+      "MetamodelId": "616e088a-958e-4e26-a4c4-c263c82b85de",
+      "Metamodel": "Issueの所有",
+      "SourceId": "38256a24-4b73-4aec-88a5-acbace36a9b4",
+      "TargetId": "e04281cd-7cb6-459c-a9c2-d4ce78703f1c",
+      "SourceIndex": 1,
       "TargetIndex": -1
     },
     {
@@ -73682,6 +73957,15 @@
       "SourceId": "38256a24-4b73-4aec-88a5-acbace36a9b4",
       "TargetId": "cf3a2579-b732-4c61-b1dc-e7649f679c79",
       "SourceIndex": 1,
+      "TargetIndex": -1
+    },
+    {
+      "Id": "ef1577d5-fb7c-4c20-a8f6-65edbfd1e454",
+      "RelationType": "Embed",
+      "MetamodelId": "616e088a-958e-4e26-a4c4-c263c82b85de",
+      "Metamodel": "Issueの所有",
+      "SourceId": "38256a24-4b73-4aec-88a5-acbace36a9b4",
+      "TargetId": "575510ff-e741-400f-833d-9b9fb62989d5",
       "TargetIndex": -1
     },
     {
