@@ -2099,7 +2099,7 @@
                 "Source": {
                   "Id": "15ad82b9-388b-48b1-93ad-f6f3ae3d951e",
                   "RoleType": "RoleChild",
-                  "Name": "課題、TBD事項",
+                  "Name": "Issues",
                   "LowerBound": 0,
                   "UpperBound": -1,
                   "ValueTypeName": "UMLSysML.UML.Behaviors.Usecases.Issue",
@@ -10527,7 +10527,7 @@
                   {
                     "Id": "15ad82b9-388b-48b1-93ad-f6f3ae3d951e",
                     "FieldType": "Property",
-                    "Name": "課題、TBD事項",
+                    "Name": "Issues",
                     "Unique": true,
                     "LowerBound": 0,
                     "UpperBound": -1,
@@ -11034,6 +11034,80 @@
                 ]
               },
               {
+                "Id": "e93584c4-8c55-43db-84b5-8159959e59ac",
+                "TypeKind": "Class",
+                "Name": "Issue",
+                "DisplayName": "Issue",
+                "Tags": [
+                  {
+                    "Name": "System.ShowInModelNavigator",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.ShowInTracePage",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.IsUnitizable",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.Type",
+                    "Value": "Entity"
+                  }
+                ],
+                "Fields": [
+                  {
+                    "Id": "68f8abe3-fc6d-4d91-8243-3de391882255",
+                    "FieldType": "Property",
+                    "Name": "Name",
+                    "Override": true,
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "ID",
+                    "Tags": [
+                      {
+                        "Name": "System.Name",
+                        "Value": "true"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "d053e7e2-a7fa-4c5f-9745-fefd389f5970",
+                    "FieldType": "Property",
+                    "Name": "Description",
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "内容",
+                    "Tags": [
+                      {
+                        "Name": "System.Description",
+                        "Value": "true"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "c6f63cf0-079e-4bb4-adb4-dc4b5e15d608",
+                    "FieldType": "Reference",
+                    "Name": "___anonymous___owner_related_to_Usecase_Issue",
+                    "Unique": true,
+                    "LowerBound": 0,
+                    "UpperBound": -1,
+                    "RelationshipClassId": "616e088a-958e-4e26-a4c4-c263c82b85de",
+                    "ValueTypeName": "UMLSysML.UML.Behaviors.Usecases.Usecase",
+                    "ValueTypeKind": "Class",
+                    "ValueTypeId": "6905cea9-caab-4594-86af-bf4ec050e8bc",
+                    "DisplayName": "親ユースケース"
+                  }
+                ]
+              },
+              {
                 "Id": "d53f8941-2132-48aa-9988-f1aa2860c542",
                 "TypeKind": "RefRelationship",
                 "Name": "ActorRelation",
@@ -11212,80 +11286,6 @@
                         "Value": "embed://document/document5"
                       }
                     ]
-                  }
-                ]
-              },
-              {
-                "Id": "e93584c4-8c55-43db-84b5-8159959e59ac",
-                "TypeKind": "Class",
-                "Name": "Issue",
-                "DisplayName": "Issue",
-                "Tags": [
-                  {
-                    "Name": "System.ShowInModelNavigator",
-                    "Value": "True"
-                  },
-                  {
-                    "Name": "System.ShowInTracePage",
-                    "Value": "True"
-                  },
-                  {
-                    "Name": "System.IsUnitizable",
-                    "Value": "True"
-                  },
-                  {
-                    "Name": "System.Type",
-                    "Value": "Entity"
-                  }
-                ],
-                "Fields": [
-                  {
-                    "Id": "68f8abe3-fc6d-4d91-8243-3de391882255",
-                    "FieldType": "Property",
-                    "Name": "Name",
-                    "Override": true,
-                    "Unique": true,
-                    "LowerBound": 1,
-                    "UpperBound": 1,
-                    "ValueTypeName": "String",
-                    "ValueTypeKind": "Primitive",
-                    "DisplayName": "ID",
-                    "Tags": [
-                      {
-                        "Name": "System.Name",
-                        "Value": "true"
-                      }
-                    ]
-                  },
-                  {
-                    "Id": "d053e7e2-a7fa-4c5f-9745-fefd389f5970",
-                    "FieldType": "Property",
-                    "Name": "内容",
-                    "Unique": true,
-                    "LowerBound": 1,
-                    "UpperBound": 1,
-                    "ValueTypeName": "String",
-                    "ValueTypeKind": "Primitive",
-                    "DisplayName": "内容",
-                    "Tags": [
-                      {
-                        "Name": "System.Description",
-                        "Value": "true"
-                      }
-                    ]
-                  },
-                  {
-                    "Id": "c6f63cf0-079e-4bb4-adb4-dc4b5e15d608",
-                    "FieldType": "Reference",
-                    "Name": "___anonymous___owner_related_to_Usecase_Issue",
-                    "Unique": true,
-                    "LowerBound": 0,
-                    "UpperBound": -1,
-                    "RelationshipClassId": "616e088a-958e-4e26-a4c4-c263c82b85de",
-                    "ValueTypeName": "UMLSysML.UML.Behaviors.Usecases.Usecase",
-                    "ValueTypeKind": "Class",
-                    "ValueTypeId": "6905cea9-caab-4594-86af-bf4ec050e8bc",
-                    "DisplayName": "親ユースケース"
                   }
                 ]
               }
@@ -33836,7 +33836,7 @@
                 "Name": "課題、TBD事項",
                 "ShowIcon": false,
                 "IsReadOnly": false,
-                "Path": "課題、TBD事項",
+                "Path": "Issues",
                 "IsReference": false,
                 "HasPathMultipleSteps": false,
                 "ShowTitle": true,
@@ -33873,7 +33873,7 @@
                     "MetamodelId": "e93584c4-8c55-43db-84b5-8159959e59ac",
                     "ShowIcon": false,
                     "IsReadOnly": false,
-                    "Path": "内容",
+                    "Path": "Description",
                     "IsReference": false,
                     "HasPathMultipleSteps": false,
                     "ShowTitle": true,
@@ -61508,7 +61508,7 @@
                 "Name": "Description",
                 "ShowIcon": false,
                 "IsReadOnly": false,
-                "Path": "内容",
+                "Path": "Description",
                 "IsReference": false,
                 "HasPathMultipleSteps": false,
                 "ShowTitle": true,
@@ -70905,7 +70905,7 @@
       "Metamodel": "Issue",
       "Fields": {
         "Name": "TBD1",
-        "内容": "TBD1の内容"
+        "Description": "TBD1の内容"
       }
     },
     {
@@ -71771,7 +71771,7 @@
       "Metamodel": "Issue",
       "Fields": {
         "Name": "TBD2",
-        "内容": "TBD2の内容"
+        "Description": "TBD2の内容"
       }
     },
     {
